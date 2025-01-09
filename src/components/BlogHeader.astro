@@ -1,5 +1,5 @@
 ---
-import { MainNav } from "./MainNav";
+import { BlogNav } from "./BlogNav";
 import { ActionButtons } from "./ActionButtons";
 ---
 
@@ -8,11 +8,11 @@ import { ActionButtons } from "./ActionButtons";
     <div class="flex h-16 items-center justify-between">
       <!-- Logo -->
       <a href="/" class="flex items-center space-x-2">
-        <span class="text-2xl font-bold text-gray-900">Cabinet Fiscal</span>
+        <span class="text-2xl font-bold text-gray-900">Blog Fiscal</span>
       </a>
 
-      <!-- Navigation principale -->
-      <MainNav client:load />
+      <!-- Navigation du blog -->
+      <BlogNav client:load />
 
       <!-- Boutons d'action -->
       <ActionButtons client:load />
@@ -22,3 +22,4 @@ import { ActionButtons } from "./ActionButtons";
 
 <!-- Spacer pour compenser la navbar fixed -->
 <div class="h-16"></div>
+

@@ -8,86 +8,123 @@ import { ContactSelect } from "./ContactSelect";
 ---
 
 <section class="bg-gray-50 py-12" id="contact">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="w-full">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-      <!-- Coordonnées -->
-      <Card>
-        <CardHeader>
-          <CardTitle class="text-2xl font-bold text-gray-900"
-            >Nos Coordonnées</CardTitle
-          >
-        </CardHeader>
-        <CardContent>
-          <div class="space-y-6">
-            <div>
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">Adresse</h3>
-              <p class="text-gray-600">
-                123 Avenue des Experts<br />
-                75008 Paris<br />
-                France
-              </p>
+      <div data-animate="slide-up" style="transition-delay: 0.1s">
+        <Card client:load class="scale-hover">
+          <CardHeader>
+            <CardTitle class="text-2xl font-bold text-gray-900"
+              >Nos Coordonnées</CardTitle
+            >
+          </CardHeader>
+          <CardContent>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                  Adresse
+                </h3>
+                <p class="text-gray-600">
+                  123 Avenue des Experts<br />
+                  75008 Paris<br />
+                  France
+                </p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                  Contact
+                </h3>
+                <p class="text-gray-600">
+                  Tél : +33 (0)1 23 45 67 89<br />
+                  Email : contact@cabinet-fiscal.fr
+                </p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                  Horaires
+                </h3>
+                <p class="text-gray-600">
+                  Lundi - Vendredi : 9h00 - 18h00<br />
+                  Sur rendez-vous uniquement
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">Contact</h3>
-              <p class="text-gray-600">
-                Tél : +33 (0)1 23 45 67 89<br />
-                Email : contact@cabinet-fiscal.fr
-              </p>
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">Horaires</h3>
-              <p class="text-gray-600">
-                Lundi - Vendredi : 9h00 - 18h00<br />
-                Sur rendez-vous uniquement
-              </p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
+      </div>
 
-      <!-- Formulaire de contact -->
-      <Card>
-        <CardHeader>
-          <CardTitle class="text-2xl font-bold text-gray-900"
-            >Formulaire de Contact</CardTitle
-          >
-        </CardHeader>
-        <CardContent>
-          <form class="space-y-6" action="#" method="POST">
-            <div class="space-y-2">
-              <Label for="name">Nom complet</Label>
-              <Input type="text" id="name" name="name" required />
-            </div>
-            <div class="space-y-2">
-              <Label for="email">Email</Label>
-              <Input type="email" id="email" name="email" required />
-            </div>
-            <div class="space-y-2">
-              <Label for="phone">Téléphone</Label>
-              <Input type="tel" id="phone" name="phone" />
-            </div>
-            <div class="space-y-2">
-              <Label for="subject">Sujet</Label>
-              <ContactSelect
-                client:load
-                placeholder="Sélectionnez un sujet"
-                options={[
-                  { value: "optimisation", label: "Optimisation fiscale" },
-                  { value: "controle", label: "Contrôle fiscal" },
-                  { value: "contentieux", label: "Contentieux" },
-                  { value: "conseil", label: "Conseil patrimonial" },
-                  { value: "autre", label: "Autre" },
-                ]}
-              />
-            </div>
-            <div class="space-y-2">
-              <Label for="message">Message</Label>
-              <Textarea id="message" name="message" rows="4" required />
-            </div>
-            <Button type="submit" class="w-full">Envoyer</Button>
-          </form>
-        </CardContent>
-      </Card>
+      <div data-animate="slide-up" style="transition-delay: 0.2s">
+        <Card client:load class="scale-hover">
+          <CardHeader>
+            <CardTitle class="text-2xl font-bold text-gray-900"
+              >Formulaire de Contact</CardTitle
+            >
+          </CardHeader>
+          <CardContent>
+            <form class="space-y-6" action="#" method="POST">
+              <div class="space-y-2">
+                <Label htmlFor="name">Nom complet</Label>
+                <Input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  client:load
+                  class="scale-hover"
+                />
+              </div>
+              <div class="space-y-2">
+                <Label htmlFor="email">Email</Label>
+                <Input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  client:load
+                  class="scale-hover"
+                />
+              </div>
+              <div class="space-y-2">
+                <Label htmlFor="phone">Téléphone</Label>
+                <Input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  client:load
+                  class="scale-hover"
+                />
+              </div>
+              <div class="space-y-2">
+                <Label htmlFor="subject">Sujet</Label>
+                <ContactSelect
+                  client:load
+                  placeholder="Sélectionnez un sujet"
+                  options={[
+                    { value: "optimisation", label: "Optimisation fiscale" },
+                    { value: "controle", label: "Contrôle fiscal" },
+                    { value: "contentieux", label: "Contentieux" },
+                    { value: "conseil", label: "Conseil patrimonial" },
+                    { value: "autre", label: "Autre" },
+                  ]}
+                />
+              </div>
+              <div class="space-y-2">
+                <Label htmlFor="message">Message</Label>
+                <Textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                  client:load
+                  class="scale-hover"
+                />
+              </div>
+              <Button type="submit" class="w-full scale-hover" client:load
+                >Envoyer</Button
+              >
+            </form>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   </div>
 </section>
