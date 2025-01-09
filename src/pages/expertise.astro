@@ -1,0 +1,124 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <BaseHead
+      title={`Expertise | ${SITE_TITLE}`}
+      description="Nos domaines d'expertise en fiscalité"
+    />
+  </head>
+  <body class="bg-gray-50">
+    <Header />
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-8">
+        Domaines d'Expertise
+      </h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Fiscalité des entreprises -->
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-4">
+            Fiscalité des Entreprises
+          </h2>
+          <p class="text-gray-600 mb-6">
+            Notre expertise couvre tous les aspects de la fiscalité des
+            entreprises, de la création à la transmission.
+          </p>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Impôt sur les sociétés (IS)</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Crédit d'impôt recherche (CIR)</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Restructurations d'entreprises</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Fiscalité internationale -->
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-4">
+            Fiscalité Internationale
+          </h2>
+          <p class="text-gray-600 mb-6">
+            Accompagnement des entreprises dans leurs opérations
+            transfrontalières.
+          </p>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Prix de transfert</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Conventions fiscales</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Implantation à l'étranger</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- TVA -->
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-4">TVA</h2>
+          <p class="text-gray-600 mb-6">
+            Expertise pointue en matière de TVA nationale et internationale.
+          </p>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>TVA intracommunautaire</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Régimes spéciaux</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Optimisation des flux</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Fiscalité immobilière -->
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-4">
+            Fiscalité Immobilière
+          </h2>
+          <p class="text-gray-600 mb-6">
+            Conseil en fiscalité immobilière pour particuliers et
+            professionnels.
+          </p>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Investissements locatifs</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Plus-values immobilières</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>Défiscalisation immobilière</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

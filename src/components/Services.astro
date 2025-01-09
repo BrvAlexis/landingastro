@@ -1,0 +1,87 @@
+---
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
+---
+
+<section class="bg-gray-50 py-12" id="services">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-bold text-gray-900 mb-8">Nos Services</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Optimisation Fiscale -->
+      <Card>
+        <CardHeader>
+          <CardTitle>Optimisation Fiscale</CardTitle>
+          <CardDescription>
+            Optimisez votre situation fiscale en toute légalité grâce à nos
+            stratégies personnalisées.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <ul class="list-disc list-inside text-gray-600 space-y-2">
+            <li>Analyse fiscale approfondie</li>
+            <li>Stratégies d'optimisation</li>
+            <li>Suivi personnalisé</li>
+          </ul>
+        </CardContent>
+      </Card>
+
+      <!-- Contrôle Fiscal -->
+      <Card>
+        <CardHeader>
+          <CardTitle>Contrôle Fiscal</CardTitle>
+          <CardDescription>
+            Un accompagnement expert pour gérer sereinement vos contrôles
+            fiscaux.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <ul class="list-disc list-inside text-gray-600 space-y-2">
+            <li>Préparation aux contrôles</li>
+            <li>Assistance durant la procédure</li>
+            <li>Négociation avec l'administration</li>
+          </ul>
+        </CardContent>
+      </Card>
+
+      <!-- Contentieux -->
+      <Card>
+        <CardHeader>
+          <CardTitle>Contentieux</CardTitle>
+          <CardDescription>
+            Défense de vos intérêts dans les litiges fiscaux.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <ul class="list-disc list-inside text-gray-600 space-y-2">
+            <li>Représentation juridique</li>
+            <li>Médiation fiscale</li>
+            <li>Résolution des litiges</li>
+          </ul>
+        </CardContent>
+      </Card>
+
+      <!-- Conseil Patrimonial -->
+      <Card>
+        <CardHeader>
+          <CardTitle>Conseil Patrimonial</CardTitle>
+          <CardDescription>
+            Optimisez la gestion et la transmission de votre patrimoine.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <ul class="list-disc list-inside text-gray-600 space-y-2">
+            <li>Stratégie patrimoniale</li>
+            <li>Transmission d'entreprise</li>
+            <li>Optimisation successorale</li>
+          </ul>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>

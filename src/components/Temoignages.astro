@@ -1,0 +1,104 @@
+---
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import { TestimonialAvatar } from "./TestimonialAvatar";
+---
+
+<section class="bg-gray-50 py-12" id="temoignages">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-bold text-gray-900 text-center mb-12">
+      Témoignages Clients
+    </h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Témoignage 1 -->
+      <Card client:load>
+        <CardContent client:load class="pt-6">
+          <div class="flex items-center mb-4">
+            <div class="h-12 w-12">
+              <TestimonialAvatar
+                client:load
+                src="https://github.com/shadcn.png"
+                alt="Sophie Martin"
+                fallback="SM"
+              />
+            </div>
+            <div class="ml-4">
+              <CardTitle client:load class="text-lg">Sophie Martin</CardTitle>
+              <p class="text-sm text-gray-600">Dirigeante PME</p>
+            </div>
+          </div>
+          <blockquote class="text-gray-600 italic">
+            "L'expertise et le professionnalisme de l'équipe nous ont permis
+            d'optimiser significativement notre situation fiscale. Un
+            accompagnement sur mesure et des conseils précieux."
+          </blockquote>
+          <div class="mt-4 flex text-yellow-400">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span
+              >★</span
+            >
+          </div>
+        </CardContent>
+      </Card>
+
+      <!-- Témoignage 2 -->
+      <Card client:load>
+        <CardContent client:load class="pt-6">
+          <div class="flex items-center mb-4">
+            <div class="h-12 w-12">
+              <TestimonialAvatar
+                client:load
+                src="/testimonial-2.jpg"
+                alt="Pierre Dubois"
+                fallback="PD"
+              />
+            </div>
+            <div class="ml-4">
+              <CardTitle client:load class="text-lg">Pierre Dubois</CardTitle>
+              <p class="text-sm text-gray-600">Investisseur Immobilier</p>
+            </div>
+          </div>
+          <blockquote class="text-gray-600 italic">
+            "Grâce à leurs conseils avisés en matière de fiscalité immobilière,
+            j'ai pu optimiser mes investissements tout en respectant le cadre
+            légal. Une équipe à l'écoute et réactive."
+          </blockquote>
+          <div class="mt-4 flex text-yellow-400">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span
+              >★</span
+            >
+          </div>
+        </CardContent>
+      </Card>
+
+      <!-- Témoignage 3 -->
+      <Card client:load>
+        <CardContent client:load class="pt-6">
+          <div class="flex items-center mb-4">
+            <div class="h-12 w-12">
+              <TestimonialAvatar
+                client:load
+                src="/testimonial-3.jpg"
+                alt="Marie Laurent"
+                fallback="ML"
+              />
+            </div>
+            <div class="ml-4">
+              <CardTitle client:load class="text-lg">Marie Laurent</CardTitle>
+              <p class="text-sm text-gray-600">Entreprise Internationale</p>
+            </div>
+          </div>
+          <blockquote class="text-gray-600 italic">
+            "Un accompagnement expert dans notre développement international.
+            Leur maîtrise de la fiscalité transfrontalière nous a permis de
+            structurer efficacement nos opérations."
+          </blockquote>
+          <div class="mt-4 flex text-yellow-400">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span
+              >★</span
+            >
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
