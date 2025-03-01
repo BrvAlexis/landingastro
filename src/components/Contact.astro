@@ -11,11 +11,11 @@ import { ContactSelect } from "./ContactSelect";
   <div class="w-full">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
       <div data-animate="slide-up" style="transition-delay: 0.1s">
-        <Card client:load class="scale-hover">
+        <Card client:load className="scale-hover">
           <CardHeader>
-            <CardTitle class="text-2xl font-bold text-gray-900"
-              >Nos Coordonnées</CardTitle
-            >
+            <CardTitle className="text-2xl font-bold text-gray-900">
+              Nos Coordonnées
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <div class="space-y-6">
@@ -53,11 +53,11 @@ import { ContactSelect } from "./ContactSelect";
       </div>
 
       <div data-animate="slide-up" style="transition-delay: 0.2s">
-        <Card client:load class="scale-hover">
+        <Card client:load className="scale-hover">
           <CardHeader>
-            <CardTitle class="text-2xl font-bold text-gray-900"
-              >Formulaire de Contact</CardTitle
-            >
+            <CardTitle className="text-2xl font-bold text-gray-900">
+              Formulaire de Contact
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <form class="space-y-6" action="#" method="POST">
@@ -69,7 +69,7 @@ import { ContactSelect } from "./ContactSelect";
                   name="name"
                   required
                   client:load
-                  class="scale-hover"
+                  className="scale-hover"
                 />
               </div>
               <div class="space-y-2">
@@ -80,7 +80,7 @@ import { ContactSelect } from "./ContactSelect";
                   name="email"
                   required
                   client:load
-                  class="scale-hover"
+                  className="scale-hover"
                 />
               </div>
               <div class="space-y-2">
@@ -90,7 +90,7 @@ import { ContactSelect } from "./ContactSelect";
                   id="phone"
                   name="phone"
                   client:load
-                  class="scale-hover"
+                  className="scale-hover"
                 />
               </div>
               <div class="space-y-2">
@@ -112,15 +112,15 @@ import { ContactSelect } from "./ContactSelect";
                 <Textarea
                   id="message"
                   name="message"
-                  rows="4"
+                  rows={4}
                   required
                   client:load
-                  class="scale-hover"
+                  className="scale-hover"
                 />
               </div>
-              <Button type="submit" class="w-full scale-hover" client:load
-                >Envoyer</Button
-              >
+              <Button type="submit" className="w-full scale-hover" client:load>
+                Envoyer
+              </Button>
             </form>
           </CardContent>
         </Card>

@@ -19,6 +19,26 @@ import "@/styles/globals.css";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <style is:global>
+      @font-face {
+        font-family: "Welcome";
+        src:
+          url("/fonts/atkinson-bold.woff") format("woff"),
+          url("/fonts/atkinson-regular.woff") format("woff");
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Welcome", sans-serif;
+        font-weight: 600;
+      }
+
       [data-animate] {
         opacity: 0;
         transform: translateY(20px);
@@ -116,6 +136,11 @@ import "@/styles/globals.css";
         50% {
           transform: scale(1.05);
         }
+      }
+
+      .welcome-font {
+        font-family: "Welcome", sans-serif;
+        font-weight: 600;
       }
     </style>
   </head>
