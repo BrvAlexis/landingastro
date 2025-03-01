@@ -2,21 +2,87 @@
 
 ---
 
-<section class="bg-blue-700">
+<section class="relative py-20 overflow-hidden">
+  <!-- Fond avec dégradé et effet de flou -->
   <div
-    class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8"
+    class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-700 opacity-90"
   >
-    <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
-      <span class="block">Prêt à optimiser votre fiscalité ?</span>
-    </h2>
-    <p class="mt-4 text-lg leading-6 text-blue-200">
-      Contactez-nous pour un premier rendez-vous gratuit et sans engagement.
-    </p>
-    <a
-      href="#contact"
-      class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50 sm:w-auto"
+  </div>
+  <div class="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10">
+  </div>
+
+  <!-- Formes décoratives -->
+  <div
+    class="absolute top-0 left-0 w-40 h-40 bg-white opacity-10 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"
+  >
+  </div>
+  <div
+    class="absolute bottom-0 right-0 w-60 h-60 bg-purple-300 opacity-20 rounded-full blur-3xl transform translate-x-1/3 translate-y-1/3"
+  >
+  </div>
+
+  <div
+    class="relative max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8"
+    data-animate="fade-in"
+  >
+    <span
+      class="inline-block px-3 py-1 text-sm font-medium text-white bg-white/20 rounded-full mb-4 backdrop-blur-sm"
     >
-      Prendre Rendez-vous
-    </a>
+      OPTIMISEZ VOTRE FISCALITÉ
+    </span>
+
+    <h2
+      class="text-3xl font-extrabold text-white sm:text-4xl md:text-5xl welcome-font"
+    >
+      <span class="block">Prêt à réduire votre charge fiscale ?</span>
+    </h2>
+
+    <div class="w-24 h-1 bg-white mx-auto my-6 rounded-full"></div>
+
+    <p class="mt-4 text-xl leading-7 text-indigo-100">
+      Contactez-nous pour un premier rendez-vous gratuit et sans engagement. Nos
+      experts sont à votre écoute.
+    </p>
+
+    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="#contact"
+        class="group relative inline-flex items-center justify-center px-8 py-3 font-medium text-indigo-700 bg-white rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:bg-indigo-50 hover:shadow-indigo-200/50"
+      >
+        <span class="relative z-10 flex items-center">
+          Prendre Rendez-vous
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </span>
+      </a>
+
+      <a
+        href="#equipe"
+        class="group inline-flex items-center justify-center px-8 py-3 font-medium text-white border-2 border-white/50 rounded-lg overflow-hidden transition-all duration-300 hover:bg-white/10 hover:border-white"
+      >
+        <span class="flex items-center">
+          Rencontrer nos experts
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
+            ></path>
+          </svg>
+        </span>
+      </a>
+    </div>
   </div>
 </section>
