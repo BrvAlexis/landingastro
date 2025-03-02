@@ -7,18 +7,185 @@ import { ActionButtons } from "./ActionButtons";
   <div class="max-w-[90%] mx-auto">
     <div class="flex h-16 items-center justify-between">
       <!-- Logo -->
-      <a href="/" class="flex items-center space-x-2">
-        <span class="text-2xl font-bold text-gray-900">Cabinet Fiscal</span>
+      <a href="/" class="flex items-center">
+        <div class="logo-container">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 280 80"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="logo-svg"
+          >
+            <g class="logo-text">
+              <text x="140" y="25" text-anchor="middle" class="logo-line-1"
+                >SCP CROUZATIER</text
+              >
+              <text x="140" y="50" text-anchor="middle" class="logo-line-2"
+                >POBEDA-THOMAS</text
+              >
+              <text x="140" y="70" text-anchor="middle" class="logo-subtitle"
+                >AVOCATS</text
+              >
+            </g>
+          </svg>
+        </div>
       </a>
 
-      <!-- Navigation principale -->
-      <MainNav client:load />
+      <!-- Navigation principale - visible sur desktop uniquement -->
+      <div class="hidden lg:block">
+        <MainNav client:load />
+      </div>
 
-      <!-- Boutons d'action -->
-      <ActionButtons client:load />
+      <!-- Boutons d'action - visible sur desktop uniquement -->
+      <div class="hidden lg:block">
+        <ActionButtons client:load />
+      </div>
+
+      <!-- Menu hamburger - visible sur mobile et tablette -->
+      <button
+        id="mobile-menu-button"
+        class="lg:hidden flex items-center p-2"
+        aria-label="Menu"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Menu mobile/tablette - caché par défaut -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t shadow-md">
+    <div class="max-w-[90%] mx-auto py-4">
+      <div class="mb-6">
+        <MainNav client:load />
+      </div>
+      <div>
+        <ActionButtons client:load />
+      </div>
     </div>
   </div>
 </header>
 
 <!-- Spacer pour compenser la navbar fixed -->
 <div class="h-16"></div>
+
+<script>
+  // Script pour gérer le menu mobile/tablette
+  document.addEventListener("DOMContentLoaded", () => {
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+
+    // Fermer le menu lors d'un clic à l'extérieur
+    document.addEventListener("click", (event) => {
+      const target = event.target as Node;
+      if (
+        mobileMenu &&
+        !mobileMenu.classList.contains("hidden") &&
+        !mobileMenu.contains(target) &&
+        mobileMenuButton &&
+        !mobileMenuButton.contains(target)
+      ) {
+        mobileMenu.classList.add("hidden");
+      }
+    });
+  });
+</script>
+
+<style>
+  .logo-container {
+    max-width: 150px;
+    width: 100%;
+    padding: 0.25rem;
+  }
+
+  .logo-svg {
+    width: 100%;
+    height: auto;
+    max-height: 50px; /* Limiter la hauteur du SVG */
+  }
+
+  .logo-text {
+    font-family: "Gotham Bold", sans-serif;
+  }
+
+  .logo-line-1,
+  .logo-line-2 {
+    font-size: 16px;
+    font-weight: bold;
+    fill: rgb(17, 24, 39); /* text-gray-900 */
+  }
+
+  .logo-subtitle {
+    font-size: 12px;
+    font-weight: 300;
+    fill: rgb(55, 65, 81); /* text-gray-700 */
+  }
+
+  /* Responsive adjustments */
+  @media (min-width: 640px) {
+    .logo-container {
+      max-width: 180px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .logo-container {
+      max-width: 200px;
+      padding: 0.5rem;
+    }
+
+    .logo-svg {
+      max-height: none;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .logo-container {
+      max-width: 220px;
+      padding: 0.75rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .logo-container {
+      max-width: 250px;
+      padding: 1rem;
+    }
+  }
+
+  /* Déclaration de la police Gotham Bold */
+  @font-face {
+    font-family: "Gotham Bold";
+    src: url("/fonts/gotham-bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Styles pour le menu mobile/tablette */
+  #mobile-menu {
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    z-index: 50;
+  }
+</style>
