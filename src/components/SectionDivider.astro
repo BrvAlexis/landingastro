@@ -1,0 +1,70 @@
+---
+interface Props {
+  variant?: "wave" | "curve" | "triangle" | "zigzag";
+  position?: "top" | "bottom";
+  flip?: boolean;
+  color?: string;
+  bgColor?: string;
+}
+
+const {
+  variant = "wave",
+  position = "bottom",
+  flip = false,
+  color = "#E7E8E9",
+  bgColor = "white",
+} = Astro.props;
+
+// Déterminer la classe de position
+const positionClass = position === "top" ? "top-0" : "bottom-0";
+
+// Déterminer la classe de transformation pour le flip
+const flipClass = flip ? "transform rotate-180" : "";
+
+// Générer le SVG en fonction de la variante
+let svgPath = "";
+
+switch (variant) {
+  case "wave":
+    svgPath = "M0,32 C320,0 480,64 1920,32 L1920,0 L0,0 Z";
+    break;
+  case "curve":
+    svgPath = "M0,0 C480,64 1440,64 1920,0 L1920,0 L0,0 Z";
+    break;
+  case "triangle":
+    svgPath = "M0,0 L1920,0 L960,64 Z";
+    break;
+  case "zigzag":
+    svgPath =
+      "M0,0 L240,32 L480,0 L720,32 L960,0 L1200,32 L1440,0 L1680,32 L1920,0 L1920,0 L0,0 Z";
+    break;
+  default:
+    svgPath = "M0,32 C320,0 480,64 1920,32 L1920,0 L0,0 Z";
+}
+---
+
+<div
+  class="relative w-full h-16 overflow-hidden"
+  style={`background-color: ${bgColor};`}
+>
+  <div class={`absolute w-full ${positionClass} ${flipClass}`}>
+    <svg
+      class="w-full h-16"
+      viewBox="0 0 1920 64"
+      preserveAspectRatio="none"
+      fill={color}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d={svgPath}></path>
+    </svg>
+  </div>
+</div>
+
+<style>
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+

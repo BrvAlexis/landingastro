@@ -1,9 +1,21 @@
 ---
-
+import SectionDivider from "./SectionDivider.astro";
+import SectionDecoration from "./SectionDecoration.astro";
 ---
 
-<section class="py-24 bg-gradient-to-b from-white to-gray-50" id="valeurs">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="relative py-24 bg-white" id="valeurs">
+  <SectionDecoration
+    variant="dots"
+    position="top-right"
+    color="hsl(var(--primary))"
+  />
+  <SectionDecoration
+    variant="circles"
+    position="bottom-left"
+    color="hsl(var(--info))"
+  />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center mb-16" data-animate="fade-in">
       <span
         class="inline-block px-3 py-1 text-sm font-medium text-primary-foreground bg-primary/20 rounded-full mb-4"
@@ -273,4 +285,11 @@
       </a>
     </div>
   </div>
+
+  <SectionDivider
+    variant="wave"
+    position="bottom"
+    color="#E7E8E9"
+    bgColor="white"
+  />
 </section>

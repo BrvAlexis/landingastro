@@ -1,10 +1,29 @@
 ---
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { TestimonialAvatar } from "./TestimonialAvatar";
+import SectionDivider from "./SectionDivider.astro";
+import SectionDecoration from "./SectionDecoration.astro";
 ---
 
-<section class="py-24 bg-gradient-to-b from-gray-50 to-white" id="equipe">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="relative py-24 bg-[#E7E8E9]" id="equipe">
+  <SectionDivider
+    variant="zigzag"
+    position="top"
+    color="white"
+    bgColor="#E7E8E9"
+  />
+  <SectionDecoration
+    variant="grid"
+    position="top-right"
+    color="hsl(var(--warning))"
+  />
+  <SectionDecoration
+    variant="dots"
+    position="bottom-left"
+    color="hsl(var(--destructive))"
+  />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center mb-16" data-animate="fade-in">
       <span
         class="inline-block px-3 py-1 text-sm font-medium text-primary-foreground bg-primary/20 rounded-full mb-4"
@@ -214,4 +233,11 @@ import { TestimonialAvatar } from "./TestimonialAvatar";
       </a>
     </div>
   </div>
+
+  <SectionDivider
+    variant="triangle"
+    position="bottom"
+    color="white"
+    bgColor="#E7E8E9"
+  />
 </section>

@@ -5,10 +5,30 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ContactSelect } from "./ContactSelect";
+import SectionDivider from "./SectionDivider.astro";
+import SectionDecoration from "./SectionDecoration.astro";
 ---
 
-<section class="py-24 bg-gradient-to-b from-white to-gray-50" id="contact">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="relative py-24 bg-white" id="contact">
+  <SectionDivider
+    variant="triangle"
+    position="top"
+    flip={true}
+    color="#E7E8E9"
+    bgColor="white"
+  />
+  <SectionDecoration
+    variant="circles"
+    position="top-left"
+    color="hsl(var(--primary))"
+  />
+  <SectionDecoration
+    variant="lines"
+    position="bottom-right"
+    color="hsl(var(--info))"
+  />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center mb-16" data-animate="fade-in">
       <span
         class="inline-block px-3 py-1 text-sm font-medium text-primary-foreground bg-primary/20 rounded-full mb-4"
@@ -364,4 +384,12 @@ import { ContactSelect } from "./ContactSelect";
       </div>
     </div>
   </div>
+
+  <SectionDivider
+    variant="wave"
+    position="bottom"
+    flip={true}
+    color="#E7E8E9"
+    bgColor="white"
+  />
 </section>
