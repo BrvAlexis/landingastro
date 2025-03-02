@@ -103,11 +103,16 @@ const { title, description = SITE_DESCRIPTION } = Astro.props;
       }
 
       .glow-hover:hover {
-        box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        box-shadow: 0 0 15px rgba(175, 158, 158, 0.5);
       }
 
       .gradient-animate {
-        background: linear-gradient(120deg, #1e40af, #3b82f6, #60a5fa);
+        background: linear-gradient(
+          120deg,
+          hsl(var(--primary)),
+          hsl(var(--info)),
+          hsl(var(--success))
+        );
         background-size: 200% 200%;
         animation: gradientMove 8s ease infinite;
       }
@@ -178,4 +183,3 @@ const { title, description = SITE_DESCRIPTION } = Astro.props;
     </script>
   </body>
 </html>
-

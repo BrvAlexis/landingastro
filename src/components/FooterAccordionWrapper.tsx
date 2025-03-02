@@ -38,7 +38,7 @@ export default function FooterAccordionWrapper() {
                   href="/mentions-legales"
                   className="hover:text-white transition-colors text-sm flex items-center"
                 >
-                  <span className="text-indigo-400 mr-1 flex-shrink-0">›</span>
+                  <span className="text-info mr-1 flex-shrink-0">›</span>
                   <span className="break-words">Mentions légales</span>
                 </a>
               </li>
@@ -47,7 +47,7 @@ export default function FooterAccordionWrapper() {
                   href="/cgv"
                   className="hover:text-white transition-colors text-sm flex items-center"
                 >
-                  <span className="text-indigo-400 mr-1 flex-shrink-0">›</span>
+                  <span className="text-info mr-1 flex-shrink-0">›</span>
                   <span className="break-words">CGV</span>
                 </a>
               </li>
@@ -56,7 +56,7 @@ export default function FooterAccordionWrapper() {
                   href="/politique-confidentialite"
                   className="hover:text-white transition-colors text-sm flex items-center"
                 >
-                  <span className="text-indigo-400 mr-1 flex-shrink-0">›</span>
+                  <span className="text-info mr-1 flex-shrink-0">›</span>
                   <span className="break-words">
                     Politique de confidentialité
                   </span>
@@ -67,7 +67,7 @@ export default function FooterAccordionWrapper() {
                   href="/cookies"
                   className="hover:text-white transition-colors text-sm flex items-center"
                 >
-                  <span className="text-indigo-400 mr-1 flex-shrink-0">›</span>
+                  <span className="text-info mr-1 flex-shrink-0">›</span>
                   <span className="break-words">Gestion des cookies</span>
                 </a>
               </li>
@@ -106,7 +106,7 @@ export default function FooterAccordionWrapper() {
               <li className="text-sm flex items-start">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-indigo-400 mr-2 mt-0.5 flex-shrink-0"
+                  className="h-4 w-4 text-info mr-2 mt-0.5 flex-shrink-0"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -133,7 +133,7 @@ export default function FooterAccordionWrapper() {
               <li className="text-sm flex items-start">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-indigo-400 mr-2 mt-0.5 flex-shrink-0"
+                  className="h-4 w-4 text-info mr-2 mt-0.5 flex-shrink-0"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -155,7 +155,7 @@ export default function FooterAccordionWrapper() {
               <li className="text-sm flex items-start">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-indigo-400 mr-2 mt-0.5 flex-shrink-0"
+                  className="h-4 w-4 text-info mr-2 mt-0.5 flex-shrink-0"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
