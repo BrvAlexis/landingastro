@@ -109,9 +109,9 @@ const { title, description = SITE_DESCRIPTION } = Astro.props;
       .gradient-animate {
         background: linear-gradient(
           120deg,
-          hsl(var(--primary)),
-          hsl(var(--info)),
-          hsl(var(--success))
+          hsl(var(--primary) / 80%),
+          hsl(var(--info) / 80%),
+          hsl(var(--success) / 80%)
         );
         background-size: 200% 200%;
         animation: gradientMove 8s ease infinite;
