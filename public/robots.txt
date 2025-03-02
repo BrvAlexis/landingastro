@@ -1,0 +1,12 @@
+# www.robotstxt.org
+
+User-agent: *
+Allow: /
+
+# Interdire l'accès aux pages d'administration (si applicable)
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+
+# Sitemap
+Sitemap: https://www.avocats-cugnaux.fr/sitemap.xml 

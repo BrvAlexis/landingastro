@@ -3,31 +3,38 @@
 // all pages through the use of the <BaseHead /> component.
 import "../styles/globals.css";
 
-interface Props {
+// Import utilities from astro:content
+import { SEO_KEYWORDS, SCHEMA_ORG, SOCIAL_MEDIA } from "../consts";
+
+export interface Props {
   title: string;
   description: string;
   image?: string;
+  canonicalUrl?: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-
-const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
+const {
+  title,
+  description,
+  image = "/images/cabinet-avocats-cugnaux.jpg",
+  canonicalUrl = Astro.url.href,
+} = Astro.props;
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
 
-
 <!-- Canonical URL -->
-<link rel="canonical" href={canonicalURL} />
+<link rel="canonical" href={canonicalUrl} />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+<meta name="keywords" content={SEO_KEYWORDS.join(", ")} />
+<meta name="author" content="Cabinet d'avocats Cugnaux" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
@@ -35,6 +42,8 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:site_name" content="Cabinet d'avocats Cugnaux" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
@@ -42,3 +51,28 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<!-- Données structurées Schema.org pour les moteurs de recherche -->
+<script type="application/ld+json" set:html={JSON.stringify(SCHEMA_ORG)} />
+
+<!-- Préconnexion aux domaines externes pour améliorer les performances -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- Balises pour les robots -->
+<meta name="robots" content="index, follow" />
+
+<!-- Hreflang pour les versions linguistiques (si applicable) -->
+<link rel="alternate" hreflang="fr" href={Astro.url} />
+
+<!-- Favicon et icônes pour différentes plateformes -->
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#8B0000" />
+<meta name="msapplication-TileColor" content="#8B0000" />
+<meta name="msapplication-config" content="/browserconfig.xml" />
+<meta name="theme-color" content="#8B0000" />
