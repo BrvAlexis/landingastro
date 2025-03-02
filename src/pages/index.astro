@@ -17,25 +17,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <style is:global>
-      @font-face {
-        font-family: "Welcome";
-        src:
-          url("/fonts/atkinson-bold.woff") format("woff"),
-          url("/fonts/atkinson-regular.woff") format("woff");
-        font-weight: 600;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Welcome", sans-serif;
-        font-weight: 600;
-      }
+      /* La définition de @font-face Welcome est supprimée car nous utilisons maintenant Playfair Display */
 
       [data-animate] {
         opacity: 0;
@@ -139,11 +121,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         50% {
           transform: scale(1.05);
         }
-      }
-
-      .welcome-font {
-        font-family: "Welcome", sans-serif;
-        font-weight: 600;
       }
     </style>
   </head>

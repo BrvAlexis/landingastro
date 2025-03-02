@@ -82,8 +82,12 @@ export default {
 					'var(--font-sans)',
 					...fontFamily.sans
 				],
-				welcome: [
-					'Welcome',
+				heading: [
+					'Playfair Display',
+					'serif'
+				],
+				body: [
+					'Source Sans Pro',
 					'sans-serif'
 				]
 			},
