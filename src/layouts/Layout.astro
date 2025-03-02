@@ -20,10 +20,7 @@ const { title, description = SITE_DESCRIPTION } = Astro.props;
     <BaseHead title={title} description={description} />
     <style is:global>
       @font-face {
-        font-family: "Welcome";
-        src:
-          url("/fonts/atkinson-bold.woff") format("woff"),
-          url("/fonts/atkinson-regular.woff") format("woff");
+        font-family: "Playfair Display";
         font-weight: 600;
         font-style: normal;
         font-display: swap;
@@ -35,7 +32,7 @@ const { title, description = SITE_DESCRIPTION } = Astro.props;
       h4,
       h5,
       h6 {
-        font-family: "Welcome", sans-serif;
+        font-family: "Playfair Display", sans-serif;
         font-weight: 600;
       }
 
@@ -144,7 +141,7 @@ const { title, description = SITE_DESCRIPTION } = Astro.props;
       }
 
       .welcome-font {
-        font-family: "Welcome", sans-serif;
+        font-family: "Playfair Display", sans-serif;
         font-weight: 600;
       }
     </style>
