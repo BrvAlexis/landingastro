@@ -11,6 +11,8 @@ export interface Props {
   description: string;
   image?: string;
   canonicalUrl?: string;
+  imageAlt?: string;
+  type?: string;
 }
 
 const {
@@ -18,13 +20,22 @@ const {
   description,
   image = "/images/cabinet-avocats-cugnaux.jpg",
   canonicalUrl = Astro.url.href,
+  imageAlt = "Cabinet d'avocats Cugnaux - Image représentative",
+  type = "website",
 } = Astro.props;
+
+// Construction des URLs absolues
+const siteUrl = Astro.site || "https://www.avocats-cugnaux.fr";
+const imageUrl = new URL(image, siteUrl).toString();
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="generator" content={Astro.generator} />
+
+<!-- Sitemap -->
+<link rel="sitemap" href="/sitemap-index.xml" />
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalUrl} />
@@ -35,37 +46,49 @@ const {
 <meta name="description" content={description} />
 <meta name="keywords" content={SEO_KEYWORDS.join(", ")} />
 <meta name="author" content="Cabinet d'avocats Cugnaux" />
+<meta
+  name="copyright"
+  content="© {new Date().getFullYear()} Cabinet d'avocats Cugnaux"
+/>
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:site_name" content="Cabinet d'avocats Cugnaux" />
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalUrl} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={imageUrl} />
+<meta property="og:image:alt" content={imageAlt} />
 <meta property="og:locale" content="fr_FR" />
-<meta property="og:site_name" content="Cabinet d'avocats Cugnaux" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:url" content={canonicalUrl} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta property="twitter:image" content={imageUrl} />
+<meta property="twitter:image:alt" content={imageAlt} />
 
-<!-- Données structurées Schema.org pour les moteurs de recherche -->
+<!-- Données structurées Schema.org -->
 <script type="application/ld+json" set:html={JSON.stringify(SCHEMA_ORG)} />
 
-<!-- Préconnexion aux domaines externes pour améliorer les performances -->
+<!-- Préconnexion aux ressources externes -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<!-- Balises pour les robots -->
-<meta name="robots" content="index, follow" />
+<!-- SEO -->
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="googlebot" content="index, follow" />
+<meta name="rating" content="general" />
+<meta name="geo.region" content="FR-31" />
+<meta name="geo.placename" content="Cugnaux" />
 
-<!-- Hreflang pour les versions linguistiques (si applicable) -->
-<link rel="alternate" hreflang="fr" href={Astro.url} />
+<!-- Langue -->
+<link rel="alternate" hreflang="fr" href={canonicalUrl} />
+<meta name="language" content="French" />
+<meta property="og:locale:alternate" content="fr_FR" />
 
-<!-- Favicon et icônes pour différentes plateformes -->
+<!-- Favicons -->
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -76,3 +99,4 @@ const {
 <meta name="msapplication-TileColor" content="#8B0000" />
 <meta name="msapplication-config" content="/browserconfig.xml" />
 <meta name="theme-color" content="#8B0000" />
+
