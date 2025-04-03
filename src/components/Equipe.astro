@@ -36,12 +36,12 @@ import SectionDecoration from "./SectionDecoration.astro";
       </h2>
       <div class="w-24 h-1 bg-primary mx-auto my-6 rounded-full"></div>
       <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-        Des avocats fiscalistes expérimentés à votre service
+        Des avocats expérimentés spécialisés dans différents domaines du droit
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-      <!-- Premier avocat -->
+      <!-- Maître Yves Crouzatier -->
       <div data-animate="slide-up" style="transition-delay: 0.1s">
         <div class="relative group h-full">
           <div
@@ -63,8 +63,8 @@ import SectionDecoration from "./SectionDecoration.astro";
                 <TestimonialAvatar
                   client:load
                   src="/yves&florence.webp"
-                  alt="Maître Jean Dupont"
-                  fallback="JD"
+                  alt="Maître Yves Crouzatier"
+                  fallback="YC"
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -73,21 +73,44 @@ import SectionDecoration from "./SectionDecoration.astro";
                   client:load
                   className="text-2xl font-bold text-gray-900 welcome-font"
                 >
-                  Maître Jean Dupont
+                  Maître Yves Crouzatier
                 </CardTitle>
                 <p class="text-info font-medium mb-4">
-                  Avocat fiscaliste associé
+                  Spécialiste en droit fiscal
                 </p>
-                <p class="text-gray-600 mb-6">
-                  Spécialiste en fiscalité des entreprises et contentieux fiscal
-                  avec plus de 15 ans d'expérience. Ancien conseiller au sein de
-                  la Direction Générale des Finances Publiques.
-                </p>
+                <div class="text-gray-600 mb-6 text-left space-y-3">
+                  <p>
+                    L'activité de Maître Crouzatier gravite autour du monde de
+                    l'entreprise. Il intervient en tant que conseil à tous les
+                    stades de l'évolution de l'entreprise, quelle que soit sa
+                    forme.
+                  </p>
+                  <ul class="list-disc pl-5 space-y-1">
+                    <li>
+                      Spécialiste en droit fiscal avec une approche globale
+                    </li>
+                    <li>
+                      Rédacteur d'actes pour les sociétés commerciales et
+                      civiles
+                    </li>
+                    <li>
+                      Rédaction de baux commerciaux et ventes de fonds de
+                      commerce
+                    </li>
+                    <li>
+                      Plaidant au tribunal de commerce et tribunal judiciaire
+                    </li>
+                  </ul>
+                  <p class="text-sm italic border-t border-gray-100 pt-2 mt-2">
+                    Également 4ème DAN de karaté et ancien enseignant à la
+                    faculté de droit de Toulouse (DJCE)
+                  </p>
+                </div>
                 <div
                   class="border-t border-gray-100 pt-4 flex justify-center space-x-4"
                 >
                   <a
-                    href="#"
+                    href="#contact"
                     class="text-gray-500 hover:text-info transition-colors"
                   >
                     <svg
@@ -101,7 +124,7 @@ import SectionDecoration from "./SectionDecoration.astro";
                     </svg>
                   </a>
                   <a
-                    href="mailto:jean.dupont@cabinet.fr"
+                    href="mailto:yves.crouzatier@cabinet.fr"
                     class="text-gray-500 hover:text-info transition-colors"
                   >
                     <svg
@@ -124,11 +147,11 @@ import SectionDecoration from "./SectionDecoration.astro";
         </div>
       </div>
 
-      <!-- Deuxième avocat -->
+      <!-- Maître Florence Pobeda-Thomas -->
       <div data-animate="slide-up" style="transition-delay: 0.2s">
         <div class="relative group h-full">
           <div
-            class="absolute inset-0 bg-gradient-to-r from-primary to-info rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition duration-300 transform group-hover:scale-105"
+            class="absolute inset-0 bg-gradient-to-r from-success to-warning rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition duration-300 transform group-hover:scale-105"
           >
           </div>
           <Card
@@ -136,7 +159,7 @@ import SectionDecoration from "./SectionDecoration.astro";
             className="relative h-full bg-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
           >
             <div
-              class="absolute top-0 left-0 w-full h-48 bg-gradient-to-r from-primary to-info rounded-t-lg"
+              class="absolute top-0 left-0 w-full h-48 bg-gradient-to-r from-success to-warning rounded-t-lg"
             >
             </div>
             <div class="relative pt-6 px-6 flex flex-col items-center">
@@ -146,8 +169,8 @@ import SectionDecoration from "./SectionDecoration.astro";
                 <TestimonialAvatar
                   client:load
                   src="/yves&florence.webp"
-                  alt="Maître Sophie Martin"
-                  fallback="SM"
+                  alt="Maître Florence Pobeda-Thomas"
+                  fallback="FP"
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -156,23 +179,43 @@ import SectionDecoration from "./SectionDecoration.astro";
                   client:load
                   className="text-2xl font-bold text-gray-900 welcome-font"
                 >
-                  Maître Sophie Martin
+                  Maître Florence Pobeda-Thomas
                 </CardTitle>
-                <p class="text-info font-medium mb-4">
-                  Avocate fiscaliste associée
+                <p class="text-success font-medium mb-4">
+                  Spécialiste en droit de la famille et droit du travail
                 </p>
-                <p class="text-gray-600 mb-6">
-                  Experte en fiscalité internationale et patrimoniale avec plus
-                  de 12 ans d'expérience. Diplômée d'un Master en droit fiscal
-                  international et ancienne collaboratrice d'un cabinet Big
-                  Four.
-                </p>
+                <div class="text-gray-600 mb-6 text-left space-y-3">
+                  <p>
+                    Titulaire d'une maîtrise en droit, d'un DJCE (Diplôme de
+                    Juriste Conseil d'Entreprise) et d'un DESS d'audit juridique
+                    et social, ainsi que d'un certificat supérieur de droit de
+                    la distribution.
+                  </p>
+                  <ul class="list-disc pl-5 space-y-1">
+                    <li>
+                      Plus de 30 ans d'expérience, inscrite au tableau de
+                      l'ordre depuis 1994
+                    </li>
+                    <li>
+                      Activités dominantes : droit du travail et droit de la
+                      famille
+                    </li>
+                    <li>
+                      Conseil en amont des contentieux, rédaction d'actes et de
+                      contrats
+                    </li>
+                    <li>
+                      Assistance et défense devant tous les tribunaux et cours
+                      d'appel
+                    </li>
+                  </ul>
+                </div>
                 <div
                   class="border-t border-gray-100 pt-4 flex justify-center space-x-4"
                 >
                   <a
-                    href="#"
-                    class="text-gray-500 hover:text-info transition-colors"
+                    href="#contact"
+                    class="text-gray-500 hover:text-success transition-colors"
                   >
                     <svg
                       class="h-5 w-5"
@@ -185,8 +228,8 @@ import SectionDecoration from "./SectionDecoration.astro";
                     </svg>
                   </a>
                   <a
-                    href="mailto:sophie.martin@cabinet.fr"
-                    class="text-gray-500 hover:text-info transition-colors"
+                    href="mailto:florence.pobeda-thomas@cabinet.fr"
+                    class="text-gray-500 hover:text-success transition-colors"
                   >
                     <svg
                       class="h-5 w-5"
