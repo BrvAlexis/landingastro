@@ -23,7 +23,7 @@ export const MainNav = () => {
         if (!isClient) return;
 
         const handleScroll = () => {
-            const sections = ["services", "expertise", "temoignages"];
+            const sections = ["services", "expertise", "equipe"];
             const scrollPosition = window.scrollY + 100;
 
             for (const section of sections) {
@@ -52,9 +52,6 @@ export const MainNav = () => {
         return `${baseStyle} ${activeSection === section ? "bg-primary/10 font-semibold" : ""} transition-all duration-300`;
     };
 
-    // Vérification côté client pour window.location
-    const isBlogActive = isClient && window.location.pathname.startsWith("/blog");
-
     return (
         <NavigationMenu className="hidden md:flex">
             <NavigationMenuList className="flex gap-6">
@@ -73,39 +70,39 @@ export const MainNav = () => {
                         className={`${navigationMenuTriggerStyle()} ${activeSection === "services" ? "bg-primary/10 font-semibold" : ""} transition-all duration-300`}
                         aria-current={activeSection === "services" ? "page" : undefined}
                     >
-                        Services
+                        Domaines d'expertise
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
                         <ul className="grid w-[400px] gap-3 p-6 md:w-[500px] md:grid-cols-2 bg-white rounded-lg shadow-lg animate-in fade-in zoom-in-95 duration-200">
                             <li>
-                                <NavigationMenuLink href="#services" className="block p-3 hover:bg-gray-50 rounded-md transition-colors duration-200">
-                                    <div className="font-medium mb-1">Optimisation Fiscale</div>
+                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-gray-50 rounded-md transition-colors duration-200">
+                                    <div className="font-medium mb-1">Droit Fiscal</div>
                                     <p className="text-sm text-gray-600">
-                                        Stratégies personnalisées pour optimiser votre situation
+                                        Optimisation fiscale et contentieux
                                     </p>
                                 </NavigationMenuLink>
                             </li>
                             <li>
-                                <NavigationMenuLink href="#services" className="block p-3 hover:bg-gray-50 rounded-md transition-colors duration-200">
-                                    <div className="font-medium mb-1">Contrôle Fiscal</div>
+                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-gray-50 rounded-md transition-colors duration-200">
+                                    <div className="font-medium mb-1">Droit des Affaires</div>
                                     <p className="text-sm text-gray-600">
-                                        Accompagnement expert pendant les contrôles
+                                        Conseil aux entreprises et contentieux
                                     </p>
                                 </NavigationMenuLink>
                             </li>
                             <li>
-                                <NavigationMenuLink href="#services" className="block p-3 hover:bg-gray-50 rounded-md transition-colors duration-200">
-                                    <div className="font-medium mb-1">Contentieux</div>
+                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-gray-50 rounded-md transition-colors duration-200">
+                                    <div className="font-medium mb-1">Droit Social</div>
                                     <p className="text-sm text-gray-600">
-                                        Défense de vos intérêts dans les litiges
+                                        Relations de travail et contentieux
                                     </p>
                                 </NavigationMenuLink>
                             </li>
                             <li>
-                                <NavigationMenuLink href="#services" className="block p-3 hover:bg-gray-50 rounded-md transition-colors duration-200">
-                                    <div className="font-medium mb-1">Conseil Patrimonial</div>
+                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-gray-50 rounded-md transition-colors duration-200">
+                                    <div className="font-medium mb-1">Droit de la Famille</div>
                                     <p className="text-sm text-gray-600">
-                                        Optimisation de votre patrimoine
+                                        Divorce, succession et contentieux
                                     </p>
                                 </NavigationMenuLink>
                             </li>
@@ -119,27 +116,17 @@ export const MainNav = () => {
                         className={getNavLinkStyle("expertise")}
                         aria-current={activeSection === "expertise" ? "page" : undefined}
                     >
-                        Expertise
+                        Expertises
                     </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
                     <NavigationMenuLink
-                        href="#temoignages"
-                        className={getNavLinkStyle("temoignages")}
-                        aria-current={activeSection === "temoignages" ? "page" : undefined}
+                        href="#equipe"
+                        className={getNavLinkStyle("equipe")}
+                        aria-current={activeSection === "equipe" ? "page" : undefined}
                     >
-                        Témoignages
-                    </NavigationMenuLink>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                    <NavigationMenuLink
-                        href="/blog"
-                        className={`${navigationMenuTriggerStyle()} ${isBlogActive ? "bg-primary/10 font-semibold" : ""} transition-all duration-300`}
-                        aria-current={isBlogActive ? "page" : undefined}
-                    >
-                        Blog
+                        Notre Équipe
                     </NavigationMenuLink>
                 </NavigationMenuItem>
             </NavigationMenuList>

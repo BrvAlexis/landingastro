@@ -23,34 +23,34 @@ export const BlogNav = () => {
                     <NavigationMenuContent>
                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
                             <li>
-                                <NavigationMenuLink href="/blog/fiscalite-entreprise">
-                                    <div className="font-medium">Fiscalité d'Entreprise</div>
+                                <NavigationMenuLink href="/blog/droit-fiscal">
+                                    <div className="font-medium">Droit Fiscal</div>
                                     <p className="text-sm text-gray-600">
-                                        Actualités et conseils pour les entreprises
+                                        Optimisation fiscale et contentieux
                                     </p>
                                 </NavigationMenuLink>
                             </li>
                             <li>
-                                <NavigationMenuLink href="/blog/fiscalite-personnelle">
-                                    <div className="font-medium">Fiscalité Personnelle</div>
+                                <NavigationMenuLink href="/blog/droit-affaires">
+                                    <div className="font-medium">Droit des Affaires</div>
                                     <p className="text-sm text-gray-600">
-                                        Optimisation et gestion patrimoniale
+                                        Conseil aux entreprises et contentieux
                                     </p>
                                 </NavigationMenuLink>
                             </li>
                             <li>
-                                <NavigationMenuLink href="/blog/international">
-                                    <div className="font-medium">Fiscalité Internationale</div>
+                                <NavigationMenuLink href="/blog/droit-social">
+                                    <div className="font-medium">Droit Social</div>
                                     <p className="text-sm text-gray-600">
-                                        Enjeux transfrontaliers et mobilité
+                                        Relations de travail et contentieux
                                     </p>
                                 </NavigationMenuLink>
                             </li>
                             <li>
-                                <NavigationMenuLink href="/blog/actualites">
-                                    <div className="font-medium">Actualités Fiscales</div>
+                                <NavigationMenuLink href="/blog/droit-famille">
+                                    <div className="font-medium">Droit de la Famille</div>
                                     <p className="text-sm text-gray-600">
-                                        Dernières réformes et jurisprudences
+                                        Divorce, succession et contentieux
                                     </p>
                                 </NavigationMenuLink>
                             </li>
