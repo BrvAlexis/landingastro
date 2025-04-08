@@ -153,91 +153,141 @@ import SectionDecoration from "./SectionDecoration.astro";
       </div>
     </div>
 
-    <div class="mt-16 text-center" data-animate="fade-in">
-      <h3 class="text-2xl font-bold text-gray-900 mb-8">
+    <div class="mt-20 pt-16 border-t border-gray-200/70" data-animate="fade-in">
+      <h3
+        class="text-3xl font-bold text-gray-900 mb-12 text-center welcome-font"
+      >
         Nos exigences professionnelles
       </h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Rigueur -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <!-- Pilier Rigueur -->
         <div
-          class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300"
+          class="group relative text-center p-6 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-lg"
           data-animate="slide-up"
           style="transition-delay: 0.1s"
         >
           <div
-            class="flex items-center justify-center w-14 h-14 bg-primary/10 rounded-full mb-4 mx-auto text-primary"
+            class="absolute -top-7 left-1/2 transform -translate-x-1/2 transition-all duration-300 group-hover:scale-110"
           >
-            <svg
-              class="h-7 w-7"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+            <div
+              class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary to-primary/70 rounded-full shadow-lg mx-auto text-white animate-float"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-              ></path>
-            </svg>
+              <svg
+                class="h-8 w-8 transition-transform duration-300 group-hover:rotate-12"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                ></path>
+              </svg>
+            </div>
           </div>
-          <h4 class="text-xl font-semibold text-center text-gray-900">
-            La rigueur
+          <h4
+            class="text-xl font-semibold text-gray-900 mt-12 mb-3 welcome-font"
+          >
+            La Rigueur
           </h4>
+          <p
+            class="text-gray-500 text-sm transition-opacity duration-300 opacity-70 group-hover:opacity-100"
+          >
+            Analyse approfondie et application méticuleuse des règles de droit
+            pour sécuriser vos intérêts.
+          </p>
+          <div
+            class="absolute inset-x-0 bottom-0 h-1 bg-primary rounded-b-xl scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+          >
+          </div>
         </div>
 
-        <!-- Efficacité -->
+        <!-- Pilier Efficacité -->
         <div
-          class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300"
+          class="group relative text-center p-6 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-lg"
           data-animate="slide-up"
           style="transition-delay: 0.2s"
         >
           <div
-            class="flex items-center justify-center w-14 h-14 bg-info/10 rounded-full mb-4 mx-auto text-info"
+            class="absolute -top-7 left-1/2 transform -translate-x-1/2 transition-all duration-300 group-hover:scale-110"
           >
-            <svg
-              class="h-7 w-7"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+            <div
+              class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-info to-info/70 rounded-full shadow-lg mx-auto text-white animate-float animation-delay-500"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-            </svg>
+              <svg
+                class="h-8 w-8 transition-transform duration-300 group-hover:-rotate-12"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
           </div>
-          <h4 class="text-xl font-semibold text-center text-gray-900">
-            L'efficacité
+          <h4
+            class="text-xl font-semibold text-gray-900 mt-12 mb-3 welcome-font"
+          >
+            L'Efficacité
           </h4>
+          <p
+            class="text-gray-500 text-sm transition-opacity duration-300 opacity-70 group-hover:opacity-100"
+          >
+            Recherche constante de solutions pragmatiques et optimales pour
+            atteindre vos objectifs rapidement.
+          </p>
+          <div
+            class="absolute inset-x-0 bottom-0 h-1 bg-info rounded-b-xl scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+          >
+          </div>
         </div>
 
-        <!-- Réactivité -->
+        <!-- Pilier Réactivité -->
         <div
-          class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300"
+          class="group relative text-center p-6 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-lg"
           data-animate="slide-up"
           style="transition-delay: 0.3s"
         >
           <div
-            class="flex items-center justify-center w-14 h-14 bg-success/10 rounded-full mb-4 mx-auto text-success"
+            class="absolute -top-7 left-1/2 transform -translate-x-1/2 transition-all duration-300 group-hover:scale-110"
           >
-            <svg
-              class="h-7 w-7"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+            <div
+              class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-success to-success/70 rounded-full shadow-lg mx-auto text-white animate-float animation-delay-1000"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
+              <svg
+                class="h-8 w-8 transition-transform duration-300 group-hover:rotate-12"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
           </div>
-          <h4 class="text-xl font-semibold text-center text-gray-900">
-            La réactivité
+          <h4
+            class="text-xl font-semibold text-gray-900 mt-12 mb-3 welcome-font"
+          >
+            La Réactivité
           </h4>
+          <p
+            class="text-gray-500 text-sm transition-opacity duration-300 opacity-70 group-hover:opacity-100"
+          >
+            Disponibilité et rapidité d'intervention pour répondre à vos
+            demandes dans les meilleurs délais.
+          </p>
+          <div
+            class="absolute inset-x-0 bottom-0 h-1 bg-success rounded-b-xl scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+          >
+          </div>
         </div>
       </div>
     </div>
@@ -274,3 +324,26 @@ import SectionDecoration from "./SectionDecoration.astro";
     bgColor="white"
   />
 </section>
+
+<style>
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  .animation-delay-500 {
+    animation-delay: 0.5s;
+  }
+  .animation-delay-1000 {
+    animation-delay: 1s;
+  }
+</style>
