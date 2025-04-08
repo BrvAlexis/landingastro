@@ -1,0 +1,96 @@
+---
+// Importations des composants
+import SectionDivider from "./SectionDivider.astro";
+import SectionDecoration from "./SectionDecoration.astro";
+import { FaqAccordion } from "./FaqAccordion.jsx";
+
+// Définition des données
+const faqItems = [
+  {
+    value: "item-1",
+    question: "Quels sont vos principaux domaines d'expertise ?",
+    answer:
+      "Notre cabinet couvre un large éventail de domaines, notamment le droit fiscal, le droit des affaires, le droit social, le droit de la famille, le droit immobilier et le droit des contrats. Consultez notre section 'Domaines d'Expertise' pour plus de détails.",
+  },
+  {
+    value: "item-2",
+    question: "Comment se déroule le premier rendez-vous ?",
+    answer:
+      "Le premier rendez-vous est une consultation initiale où nous discutons de votre situation, évaluons vos besoins juridiques et explorons les solutions possibles. C'est aussi l'occasion de déterminer si nous sommes le bon cabinet pour vous accompagner.",
+  },
+  {
+    value: "item-3",
+    question: "Comment sont calculés vos honoraires ?",
+    answer:
+      "Nos honoraires sont généralement basés sur un taux horaire ou un forfait, selon la nature et la complexité du dossier. Une convention d'honoraires claire et détaillée vous sera proposée avant toute intervention, garantissant une totale transparence.",
+  },
+  {
+    value: "item-4",
+    question: "Acceptez-vous l'aide juridictionnelle ?",
+    answer:
+      "Nous étudions les demandes d'aide juridictionnelle au cas par cas. N'hésitez pas à nous contacter pour discuter de votre éligibilité et des modalités.",
+  },
+  {
+    value: "item-5",
+    question: "Quels documents dois-je apporter lors du premier rendez-vous ?",
+    answer:
+      "Il est utile d'apporter tous les documents pertinents relatifs à votre affaire (contrats, courriers, jugements précédents, etc.). Lors de la prise de rendez-vous, nous pourrons vous indiquer plus précisément les pièces nécessaires.",
+  },
+  {
+    value: "item-6",
+    question: "Où se situe le cabinet ?",
+    answer:
+      "Notre cabinet est situé au 151 Route de Toulouse, 31270 Cugnaux. Vous trouverez nos coordonnées complètes et un plan d'accès dans la section 'Contact' de notre site.",
+  },
+];
+---
+
+<section class="relative py-24 bg-white" id="faq">
+  <SectionDivider
+    variant="wave"
+    position="top"
+    color="#E7E8E9"
+    bgColor="white"
+  />
+
+  <SectionDecoration
+    variant="grid"
+    position="top-left"
+    color="hsl(var(--info))"
+  />
+
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center mb-16" data-animate="fade-in">
+      <span
+        class="inline-block px-4 py-1.5 text-sm font-semibold text-primary-foreground bg-primary/80 rounded-full mb-4 border border-primary/50 shadow-sm"
+      >
+        QUESTIONS FRÉQUENTES
+      </span>
+
+      <h2
+        class="text-3xl font-extrabold text-gray-900 sm:text-4xl md:text-5xl welcome-font"
+      >
+        Réponses à vos interrogations
+      </h2>
+
+      <div class="w-24 h-1 bg-primary mx-auto my-6 rounded-full"></div>
+
+      <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
+        Trouvez rapidement les réponses aux questions les plus courantes
+        concernant nos services et notre fonctionnement.
+      </p>
+    </div>
+
+    <div class="space-y-4" data-animate="slide-up">
+      <FaqAccordion client:load items={faqItems} />
+    </div>
+  </div>
+
+  <SectionDivider
+    variant="wave"
+    position="bottom"
+    flip={true}
+    color="#0f172a"
+    bgColor="white"
+  />
+</section>
