@@ -33,10 +33,11 @@ import { AnimatedGridPattern } from "./magicui/animated-grid-pattern";
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10">
     <div class="text-center">
       <div
-        class="inline-block mb-4 px-3 py-1 rounded-full bg-primary/30 backdrop-blur-sm border border-primary/20"
+        class="inline-block mb-4 px-4 py-1.5 rounded-full bg-primary/80 backdrop-blur-sm border border-primary/50 shadow-sm"
         data-animate="fade-in"
       >
-        <span class="text-primary-foreground text-sm font-medium tracking-wider"
+        <span
+          class="text-primary-foreground text-sm font-semibold tracking-wider"
           >CABINET D'AVOCATS À CUGNAUX</span
         >
       </div>
@@ -60,18 +61,18 @@ import { AnimatedGridPattern } from "./magicui/animated-grid-pattern";
       </p>
 
       <div
-        class="mt-8 max-w-md mx-auto sm:flex sm:justify-center md:mt-10"
+        class="mt-8 max-w-md mx-auto sm:flex sm:justify-center md:mt-10 group"
         data-animate="fade-in"
         style="transition-delay: 0.4s"
       >
-        <div class="rounded-md shadow" data-animate="slide-left">
+        <div class="rounded-md shadow-sm" data-animate="slide-left">
           <a
             href="#contact"
-            class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary-foreground bg-primary hover:bg-primary/90 md:py-4 md:text-lg md:px-10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-105"
+            class="group/button1 w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary-foreground bg-gradient-to-r from-primary to-primary/80 hover:from-primary hover:to-primary/70 md:py-4 md:text-lg md:px-10 transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 hover:scale-105 transform"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 mr-2"
+              class="h-8 w-8 mr-3 transition-transform duration-300 group-hover/button1:translate-x-1"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
@@ -84,17 +85,14 @@ import { AnimatedGridPattern } from "./magicui/animated-grid-pattern";
             Prendre rendez-vous
           </a>
         </div>
-        <div
-          class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3"
-          data-animate="slide-right"
-        >
+        <div class="mt-3 rounded-md sm:mt-0 sm:ml-3" data-animate="slide-right">
           <a
             href="#expertise"
-            class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-info hover:bg-info/90 md:py-4 md:text-lg md:px-10 transition-all duration-300 hover:shadow-lg hover:shadow-info/40 hover:scale-105"
+            class="group/button2 w-full flex items-center justify-center px-8 py-3 border border-info text-info bg-white/20 backdrop-blur-sm text-base font-medium rounded-md hover:bg-gradient-to-r hover:from-info hover:to-info/80 hover:text-white hover:border-transparent hover:shadow-xl hover:shadow-info/30 md:py-4 md:text-lg md:px-10 transition-all duration-300 hover:scale-105 transform"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 mr-2"
+              class="h-10 w-10 mr-3 transition-transform duration-300 group-hover/button2:translate-x-1"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
