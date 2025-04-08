@@ -24,7 +24,7 @@ import { TestimonialAvatar } from "./TestimonialAvatar";
     <div class="flex flex-col space-y-12">
       <!-- Panneau Maître Yves Crouzatier -->
       <div
-        class="bg-white p-8 rounded-lg shadow-md"
+        class="bg-white p-8 rounded-lg shadow-md overflow-hidden"
         data-animate="slide-up"
         style="transition-delay: 0.1s"
       >
@@ -40,30 +40,91 @@ import { TestimonialAvatar } from "./TestimonialAvatar";
               className="h-32 w-32 md:h-40 md:w-40 border-4 border-white shadow-md"
             />
           </div>
-          <div class="text-center md:text-left">
+          <div class="text-center md:text-left flex-1">
             <h3 class="text-2xl font-bold text-gray-900 welcome-font mb-1">
               Maître Yves Crouzatier
             </h3>
             <p class="text-info font-medium mb-4">
               Spécialiste en droit fiscal
             </p>
-            <p class="text-gray-600">
-              L'activité de Maître Crouzatier gravite autour du monde de
-              l'entreprise. Il intervient en tant que conseil à tous les stades
-              de l'évolution de l'entreprise, quelle que soit sa forme,
-              privilégiant une approche globale en droit fiscal, rédaction
-              d'actes et contentieux commerciaux.
+            {/* Description courte visible par défaut */}
+            <p class="text-gray-600 mb-4" id="short-desc-crouzatier">
+              Spécialiste en droit fiscal, son approche est globale et tournée
+              vers le monde de l'entreprise, de la création à la liquidation,
+              incluant la rédaction d'actes et le contentieux commercial.
             </p>
+            {/* Description longue cachée par défaut */}
+            <div
+              id="full-desc-crouzatier"
+              class="text-gray-600 space-y-3 max-h-0 overflow-hidden transition-max-height duration-700 ease-in-out"
+            >
+              <p>
+                L'activité de Maître CROUZATIER gravite autour du monde de
+                l'entreprise. Il intervient en tant que conseil, à tous les
+                stades de l'évolution de l'entreprise, quelle que soit sa forme,
+                individuelle ou sociétale.
+              </p>
+              <p>
+                Spécialiste en droit fiscal, son approche de la résolution des
+                problématiques qui lui sont soumises est globale.
+              </p>
+              <p>
+                En tant que rédacteur d'actes, Maître CROUZATIER est susceptible
+                d'intervenir pour la constitution de sociétés commerciales ou
+                civiles, toute modification des statuts des dites sociétés, ou
+                encore leur dissolution liquidation.
+              </p>
+              <p>
+                Dans le cadre de son activité tournée vers le secteur de
+                l'entreprise, il rédige également, notamment, les baux
+                commerciaux ou professionnels et les ventes de fonds de
+                commerce.
+              </p>
+              <p>
+                En tant qu'avocat plaidant sa juridiction de prédilection est le
+                tribunal de commerce en demande comme en défense, ou encore dans
+                le cadre des procédures collectives (redressement ou liquidation
+                judiciaire). Il exerce également son activité devant le tribunal
+                judiciaire, principalement concernant des difficultés relatives
+                au statut des baux commerciaux.
+              </p>
+              <p class="text-sm italic border-t border-gray-100 pt-3 mt-3">
+                Maître CROUZATIER, 4ème DAN de KARATE, et, ancien compétiteur de
+                haut niveau officie le soir en tant qu'enseignant de KARATE
+                CONTACT AU GYMNASE Michel JAZY de CUGNAUX. Il est intervenu
+                pendant de longues années à la faculté de droit de TOULOUSE dans
+                le cadre du DJCE.
+              </p>
+            </div>
+            {/* Bouton pour afficher/masquer */}
+            <button
+              data-toggle-desc="crouzatier"
+              class="text-info hover:text-info/80 font-medium text-sm mt-2 inline-flex items-center transition-colors"
+            >
+              <span>Lire la suite</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 ml-1 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"></path></svg
+              >
+            </button>
           </div>
         </div>
       </div>
 
-      <!-- Séparateur -->
+      {/* Séparateur */}
       <hr class="border-t border-gray-300 my-8 md:my-12" />
 
       <!-- Panneau Maître Florence Pobeda-Thomas -->
       <div
-        class="bg-white p-8 rounded-lg shadow-md"
+        class="bg-white p-8 rounded-lg shadow-md overflow-hidden"
         data-animate="slide-up"
         style="transition-delay: 0.2s"
       >
@@ -79,46 +140,125 @@ import { TestimonialAvatar } from "./TestimonialAvatar";
               className="h-32 w-32 md:h-40 md:w-40 border-4 border-white shadow-md"
             />
           </div>
-          <div class="text-center md:text-left">
+          <div class="text-center md:text-left flex-1">
             <h3 class="text-2xl font-bold text-gray-900 welcome-font mb-1">
               Maître Florence Pobeda-Thomas
             </h3>
             <p class="text-success font-medium mb-4">
               Spécialiste en droit de la famille et droit du travail
             </p>
-            <p class="text-gray-600">
-              Forte de plus de 30 ans d'expérience, Maître Pobeda-Thomas vous
-              accompagne en droit du travail et droit de la famille. Elle assure
-              le conseil en amont des contentieux, la rédaction d'actes et la
-              défense devant toutes les juridictions.
+            {/* Description courte visible par défaut */}
+            <p class="text-gray-600 mb-4" id="short-desc-pobeda">
+              Forte de plus de 30 ans d'expérience et titulaire d'un DJCE, ses
+              activités dominantes sont le droit du travail et le droit de la
+              famille, assurant conseil, rédaction d'actes et défense en
+              justice.
             </p>
+            {/* Description longue cachée par défaut */}
+            <div
+              id="full-desc-pobeda"
+              class="text-gray-600 space-y-3 max-h-0 overflow-hidden transition-max-height duration-700 ease-in-out"
+            >
+              <p>
+                Maître POBEDA-THOMAS est titulaire d'une maîtrise en droit et de
+                deux diplômes de troisième cycle : un DJCE (Diplôme de Juriste
+                Conseil d'Entreprise) et un DESS d'audit juridique et social.
+                Elle possède également un certificat supérieur de droit de la
+                distribution.
+              </p>
+              <p>
+                Maître POBEDA-THOMAS exerce la profession depuis plus de 30 ans
+                et est inscrite au tableau de l'ordre depuis 1994.
+              </p>
+              <p>
+                Ses activités dominantes sont le droit du travail, le droit de
+                la famille, mais elle exerce aussi dans de nombreux domaines
+                tels que le droit commercial, le droit de la responsabilité, le
+                droit des contrats, le recouvrement de créances, la rédaction
+                d'actes…
+              </p>
+              <p>
+                L'Avocat a un rôle de conseil en dehors de tout contentieux pour
+                prévenir celui- ci ou vous informer par exemple de vos droits et
+                obligations. Maître POBEDA- THOMAS vous assiste et rédige tous
+                documents transactionnels ou actes/contrats fixant vos accords.
+              </p>
+              <p>
+                Maître POBEDA-THOMAS vous assiste et vous défend devant tous les
+                Tribunaux et Cours d'appels. Elle vous accompagne tout au long
+                de la procédure et met tout en œuvre pour assurer la défense de
+                vos intérêts.
+              </p>
+            </div>
+            {/* Bouton pour afficher/masquer */}
+            <button
+              data-toggle-desc="pobeda"
+              class="text-success hover:text-success/80 font-medium text-sm mt-2 inline-flex items-center transition-colors"
+            >
+              <span>Lire la suite</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 ml-1 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"></path></svg
+              >
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-    <div
-      class="mt-16 text-center"
-      data-animate="fade-in"
-      style="transition-delay: 0.3s"
-    >
-      <a
-        href="#contact"
-        class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg transition-all duration-300"
-      >
-        <span>Prendre rendez-vous</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 ml-2"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-            clip-rule="evenodd"></path>
-        </svg>
-      </a>
-    </div>
+    
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleButtons = document.querySelectorAll("[data-toggle-desc]");
+
+    toggleButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const targetId = button.getAttribute("data-toggle-desc");
+        const fullDesc = document.getElementById(`full-desc-${targetId}`);
+        const shortDesc = document.getElementById(`short-desc-${targetId}`);
+        const buttonText = button.querySelector("span");
+        const buttonIcon = button.querySelector("svg");
+
+        if (fullDesc && shortDesc && buttonText && buttonIcon) {
+          const isExpanded =
+            fullDesc.style.maxHeight !== "0px" &&
+            fullDesc.style.maxHeight !== "";
+
+          if (isExpanded) {
+            // Collapse
+            fullDesc.style.maxHeight = "0px";
+            // Optionnel: Cacher la description courte si on la remplace
+            // shortDesc.style.display = 'block';
+            buttonText.textContent = "Lire la suite";
+            buttonIcon.style.transform = "rotate(0deg)";
+          } else {
+            // Expand
+            // Optionnel: Cacher la description courte si on la remplace
+            // shortDesc.style.display = 'none';
+            fullDesc.style.maxHeight = fullDesc.scrollHeight + "px"; // Ajuste à la hauteur réelle du contenu
+            buttonText.textContent = "Réduire";
+            buttonIcon.style.transform = "rotate(180deg)";
+          }
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  /* Assure une transition fluide pour max-height */
+  .transition-max-height {
+    transition: max-height 0.7s ease-in-out;
+  }
+</style>

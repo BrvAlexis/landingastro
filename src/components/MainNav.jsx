@@ -73,7 +73,7 @@ export const MainNav = () => {
                         Domaines d'expertise
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                        <ul className="grid w-[400px] gap-3 p-6 md:w-[500px] md:grid-cols-2 bg-white rounded-lg shadow-lg animate-in fade-in zoom-in-95 duration-200">
+                        <ul className="grid w-[400px] gap-3 p-6 md:w-[600px] md:grid-cols-3 bg-white rounded-lg shadow-lg animate-in fade-in zoom-in-95 duration-200">
                             <li>
                                 <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-gray-50 rounded-md transition-colors duration-200">
                                     <div className="font-medium mb-1">Droit Fiscal</div>
@@ -103,6 +103,46 @@ export const MainNav = () => {
                                     <div className="font-medium mb-1">Droit de la Famille</div>
                                     <p className="text-sm text-gray-600">
                                         Divorce, succession et contentieux
+                                    </p>
+                                </NavigationMenuLink>
+                            </li>
+                            <li>
+                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-gray-50 rounded-md transition-colors duration-200">
+                                    <div className="font-medium mb-1">Propriété Intellectuelle</div>
+                                    <p className="text-sm text-gray-600">
+                                        Marques, brevets, droits d'auteur
+                                    </p>
+                                </NavigationMenuLink>
+                            </li>
+                            <li>
+                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-gray-50 rounded-md transition-colors duration-200">
+                                    <div className="font-medium mb-1">Contentieux Divers</div>
+                                    <p className="text-sm text-gray-600">
+                                        Représentation devant les juridictions
+                                    </p>
+                                </NavigationMenuLink>
+                            </li>
+                            <li>
+                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-gray-50 rounded-md transition-colors duration-200">
+                                    <div className="font-medium mb-1">Rédactions d'Actes</div>
+                                    <p className="text-sm text-gray-600">
+                                        Contrats, statuts, baux
+                                    </p>
+                                </NavigationMenuLink>
+                            </li>
+                            <li>
+                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-gray-50 rounded-md transition-colors duration-200">
+                                    <div className="font-medium mb-1">Droit Immobilier</div>
+                                    <p className="text-sm text-gray-600">
+                                        Construction, baux, copropriété
+                                    </p>
+                                </NavigationMenuLink>
+                            </li>
+                            <li>
+                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-gray-50 rounded-md transition-colors duration-200">
+                                    <div className="font-medium mb-1">Droit des Contrats</div>
+                                    <p className="text-sm text-gray-600">
+                                        Négociation, rédaction, analyse
                                     </p>
                                 </NavigationMenuLink>
                             </li>
