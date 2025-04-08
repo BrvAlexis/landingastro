@@ -1,29 +1,10 @@
 ---
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { TestimonialAvatar } from "./TestimonialAvatar";
-import SectionDivider from "./SectionDivider.astro";
-import SectionDecoration from "./SectionDecoration.astro";
 ---
 
-<section class="relative py-24 bg-[#E7E8E9]" id="equipe">
-  <SectionDivider
-    variant="zigzag"
-    position="top"
-    color="white"
-    bgColor="#E7E8E9"
-  />
-  <SectionDecoration
-    variant="grid"
-    position="top-right"
-    color="hsl(var(--warning))"
-  />
-  <SectionDecoration
-    variant="dots"
-    position="bottom-left"
-    color="hsl(var(--destructive))"
-  />
-
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<section class="relative py-24 bg-gray-50 text-gray-900" id="equipe">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center mb-16" data-animate="fade-in">
       <span
         class="inline-block px-3 py-1 text-sm font-medium text-primary-foreground bg-primary/20 rounded-full mb-4"
@@ -40,214 +21,78 @@ import SectionDecoration from "./SectionDecoration.astro";
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-      <!-- Maître Yves Crouzatier -->
-      <div data-animate="slide-up" style="transition-delay: 0.1s">
-        <div class="relative group h-full">
-          <div
-            class="absolute inset-0 bg-gradient-to-r from-primary to-info rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition duration-300 transform group-hover:scale-105"
-          >
+    <div class="flex flex-col space-y-12">
+      <!-- Panneau Maître Yves Crouzatier -->
+      <div
+        class="bg-white p-8 rounded-lg shadow-md"
+        data-animate="slide-up"
+        style="transition-delay: 0.1s"
+      >
+        <div
+          class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12"
+        >
+          <div class="flex-shrink-0">
+            <TestimonialAvatar
+              client:load
+              src="/yves&florence.webp"
+              alt="Maître Yves Crouzatier"
+              fallback="YC"
+              className="h-32 w-32 md:h-40 md:w-40 border-4 border-white shadow-md"
+            />
           </div>
-          <Card
-            client:load
-            className="relative h-full bg-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
-          >
-            <div
-              class="absolute top-0 left-0 w-full h-48 bg-gradient-to-r from-primary to-info rounded-t-lg"
-            >
-            </div>
-            <div class="relative pt-6 px-6 flex flex-col items-center">
-              <div
-                class="h-32 w-32 rounded-full border-4 border-white shadow-lg overflow-hidden mt-4 mb-4"
-              >
-                <TestimonialAvatar
-                  client:load
-                  src="/yves&florence.webp"
-                  alt="Maître Yves Crouzatier"
-                  fallback="YC"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <CardContent client:load className="text-center">
-                <CardTitle
-                  client:load
-                  className="text-2xl font-bold text-gray-900 welcome-font"
-                >
-                  Maître Yves Crouzatier
-                </CardTitle>
-                <p class="text-info font-medium mb-4">
-                  Spécialiste en droit fiscal
-                </p>
-                <div class="text-gray-600 mb-6 text-left space-y-3">
-                  <p>
-                    L'activité de Maître Crouzatier gravite autour du monde de
-                    l'entreprise. Il intervient en tant que conseil à tous les
-                    stades de l'évolution de l'entreprise, quelle que soit sa
-                    forme.
-                  </p>
-                  <ul class="list-disc pl-5 space-y-1">
-                    <li>
-                      Spécialiste en droit fiscal avec une approche globale
-                    </li>
-                    <li>
-                      Rédacteur d'actes pour les sociétés commerciales et
-                      civiles
-                    </li>
-                    <li>
-                      Rédaction de baux commerciaux et ventes de fonds de
-                      commerce
-                    </li>
-                    <li>
-                      Plaidant au tribunal de commerce et tribunal judiciaire
-                    </li>
-                  </ul>
-                  <p class="text-sm italic border-t border-gray-100 pt-2 mt-2">
-                    Également 4ème DAN de karaté et ancien enseignant à la
-                    faculté de droit de Toulouse (DJCE)
-                  </p>
-                </div>
-                <div
-                  class="border-t border-gray-100 pt-4 flex justify-center space-x-4"
-                >
-                  <a
-                    href="#contact"
-                    class="text-gray-500 hover:text-info transition-colors"
-                  >
-                    <svg
-                      class="h-5 w-5"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                      ></path>
-                    </svg>
-                  </a>
-                  <a
-                    href="mailto:yves.crouzatier@cabinet.fr"
-                    class="text-gray-500 hover:text-info transition-colors"
-                  >
-                    <svg
-                      class="h-5 w-5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
-                      ></path>
-                      <path
-                        d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
-                      ></path>
-                    </svg>
-                  </a>
-                </div>
-              </CardContent>
-            </div>
-          </Card>
+          <div class="text-center md:text-left">
+            <h3 class="text-2xl font-bold text-gray-900 welcome-font mb-1">
+              Maître Yves Crouzatier
+            </h3>
+            <p class="text-info font-medium mb-4">
+              Spécialiste en droit fiscal
+            </p>
+            <p class="text-gray-600">
+              L'activité de Maître Crouzatier gravite autour du monde de
+              l'entreprise. Il intervient en tant que conseil à tous les stades
+              de l'évolution de l'entreprise, quelle que soit sa forme,
+              privilégiant une approche globale en droit fiscal, rédaction
+              d'actes et contentieux commerciaux.
+            </p>
+          </div>
         </div>
       </div>
 
-      <!-- Maître Florence Pobeda-Thomas -->
-      <div data-animate="slide-up" style="transition-delay: 0.2s">
-        <div class="relative group h-full">
-          <div
-            class="absolute inset-0 bg-gradient-to-r from-success to-warning rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition duration-300 transform group-hover:scale-105"
-          >
+      <!-- Séparateur -->
+      <hr class="border-t border-gray-300 my-8 md:my-12" />
+
+      <!-- Panneau Maître Florence Pobeda-Thomas -->
+      <div
+        class="bg-white p-8 rounded-lg shadow-md"
+        data-animate="slide-up"
+        style="transition-delay: 0.2s"
+      >
+        <div
+          class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12"
+        >
+          <div class="flex-shrink-0">
+            <TestimonialAvatar
+              client:load
+              src="/yves&florence.webp"
+              alt="Maître Florence Pobeda-Thomas"
+              fallback="FP"
+              className="h-32 w-32 md:h-40 md:w-40 border-4 border-white shadow-md"
+            />
           </div>
-          <Card
-            client:load
-            className="relative h-full bg-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
-          >
-            <div
-              class="absolute top-0 left-0 w-full h-48 bg-gradient-to-r from-success to-warning rounded-t-lg"
-            >
-            </div>
-            <div class="relative pt-6 px-6 flex flex-col items-center">
-              <div
-                class="h-32 w-32 rounded-full border-4 border-white shadow-lg overflow-hidden mt-4 mb-4"
-              >
-                <TestimonialAvatar
-                  client:load
-                  src="/yves&florence.webp"
-                  alt="Maître Florence Pobeda-Thomas"
-                  fallback="FP"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <CardContent client:load className="text-center">
-                <CardTitle
-                  client:load
-                  className="text-2xl font-bold text-gray-900 welcome-font"
-                >
-                  Maître Florence Pobeda-Thomas
-                </CardTitle>
-                <p class="text-success font-medium mb-4">
-                  Spécialiste en droit de la famille et droit du travail
-                </p>
-                <div class="text-gray-600 mb-6 text-left space-y-3">
-                  <p>
-                    Titulaire d'une maîtrise en droit, d'un DJCE (Diplôme de
-                    Juriste Conseil d'Entreprise) et d'un DESS d'audit juridique
-                    et social, ainsi que d'un certificat supérieur de droit de
-                    la distribution.
-                  </p>
-                  <ul class="list-disc pl-5 space-y-1">
-                    <li>
-                      Plus de 30 ans d'expérience, inscrite au tableau de
-                      l'ordre depuis 1994
-                    </li>
-                    <li>
-                      Activités dominantes : droit du travail et droit de la
-                      famille
-                    </li>
-                    <li>
-                      Conseil en amont des contentieux, rédaction d'actes et de
-                      contrats
-                    </li>
-                    <li>
-                      Assistance et défense devant tous les tribunaux et cours
-                      d'appel
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  class="border-t border-gray-100 pt-4 flex justify-center space-x-4"
-                >
-                  <a
-                    href="#contact"
-                    class="text-gray-500 hover:text-success transition-colors"
-                  >
-                    <svg
-                      class="h-5 w-5"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                      ></path>
-                    </svg>
-                  </a>
-                  <a
-                    href="mailto:florence.pobeda-thomas@cabinet.fr"
-                    class="text-gray-500 hover:text-success transition-colors"
-                  >
-                    <svg
-                      class="h-5 w-5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
-                      ></path>
-                      <path
-                        d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
-                      ></path>
-                    </svg>
-                  </a>
-                </div>
-              </CardContent>
-            </div>
-          </Card>
+          <div class="text-center md:text-left">
+            <h3 class="text-2xl font-bold text-gray-900 welcome-font mb-1">
+              Maître Florence Pobeda-Thomas
+            </h3>
+            <p class="text-success font-medium mb-4">
+              Spécialiste en droit de la famille et droit du travail
+            </p>
+            <p class="text-gray-600">
+              Forte de plus de 30 ans d'expérience, Maître Pobeda-Thomas vous
+              accompagne en droit du travail et droit de la famille. Elle assure
+              le conseil en amont des contentieux, la rédaction d'actes et la
+              défense devant toutes les juridictions.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -259,7 +104,7 @@ import SectionDecoration from "./SectionDecoration.astro";
     >
       <a
         href="#contact"
-        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-primary to-info hover:from-primary/90 hover:to-info/90 shadow-md hover:shadow-lg transition-all duration-300"
+        class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg transition-all duration-300"
       >
         <span>Prendre rendez-vous</span>
         <svg
@@ -276,11 +121,4 @@ import SectionDecoration from "./SectionDecoration.astro";
       </a>
     </div>
   </div>
-
-  <SectionDivider
-    variant="triangle"
-    position="bottom"
-    color="white"
-    bgColor="#E7E8E9"
-  />
 </section>
