@@ -244,7 +244,22 @@ import SectionDecoration from "./SectionDecoration.astro";
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <form class="space-y-6" action="#" method="POST">
+              <form
+                class="space-y-6"
+                name="contact-cabinet-avocats"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                data-netlify-recaptcha="true"
+              >
+                {/* Champ caché pour le honeypot */}
+                <p class="hidden">
+                  <label>
+                    Ne pas remplir si vous êtes humain: <input
+                      name="bot-field"
+                    />
+                  </label>
+                </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div class="space-y-2">
                     <Label htmlFor="name">Nom complet</Label>
@@ -284,6 +299,7 @@ import SectionDecoration from "./SectionDecoration.astro";
                     <Label htmlFor="subject">Sujet</Label>
                     <ContactSelect
                       client:load
+                      name="subject"
                       placeholder="Sélectionnez un sujet"
                       options={[
                         {
@@ -331,6 +347,7 @@ import SectionDecoration from "./SectionDecoration.astro";
                     >.
                   </label>
                 </div>
+                {/* Netlify injectera le reCAPTCHA ici */}
                 <Button
                   type="submit"
                   className="w-full scale-hover"
