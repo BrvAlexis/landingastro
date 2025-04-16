@@ -1,6 +1,7 @@
 ---
 import { MainNav } from "./MainNav";
 import { ActionButtons } from "./ActionButtons";
+import { HeaderLink } from "./HeaderLink";
 ---
 
 <header class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b">
@@ -68,9 +69,23 @@ import { ActionButtons } from "./ActionButtons";
   <!-- Menu mobile/tablette - caché par défaut -->
   <div id="mobile-menu" class="hidden lg:hidden bg-card border-t shadow-md">
     <div class="max-w-[90%] mx-auto py-4">
-      <div class="mb-6">
-        <MainNav client:load />
-      </div>
+      <nav class="flex flex-col space-y-4 mb-6">
+        <HeaderLink
+          href="/"
+          class="block px-4 py-2 text-base font-medium hover:bg-accent rounded-md"
+          >Accueil</HeaderLink
+        >
+        <HeaderLink
+          href="#expertise"
+          class="block px-4 py-2 text-base font-medium hover:bg-accent rounded-md"
+          >Expertises</HeaderLink
+        >
+        <HeaderLink
+          href="#equipe"
+          class="block px-4 py-2 text-base font-medium hover:bg-accent rounded-md"
+          >Notre Équipe</HeaderLink
+        >
+      </nav>
       <div>
         <ActionButtons client:load />
       </div>
