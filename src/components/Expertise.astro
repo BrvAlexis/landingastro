@@ -8,11 +8,19 @@ import SectionDecoration from "./SectionDecoration.astro";
     variant="curve"
     position="top"
     flip={true}
-    color="#d9d9d9"
+    color="hsl(var(--muted))"
     bgColor="white"
   />
-  <SectionDecoration variant="circles" position="top-right" color="#3c6e71" />
-  <SectionDecoration variant="dots" position="bottom-left" color="#284b63" />
+  <SectionDecoration
+    variant="circles"
+    position="top-right"
+    color="hsl(var(--secondary))"
+  />
+  <SectionDecoration
+    variant="dots"
+    position="bottom-left"
+    color="hsl(var(--primary))"
+  />
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center mb-16" data-animate="fade-in">
@@ -36,11 +44,7 @@ import SectionDecoration from "./SectionDecoration.astro";
       <div data-animate="slide-up" style="transition-delay: 0.1s">
         <div class="relative group h-full">
           <div
-            class="absolute inset-0 bg-primary rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition duration-300 transform group-hover:scale-105"
-          >
-          </div>
-          <div
-            class="relative h-full bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col"
+            class="relative h-full bg-white p-6 rounded-lg shadow-md group-hover:shadow-[0_10px_25px_-5px_hsl(var(--primary)/0.3)] transition-all duration-300 transform group-hover:-translate-y-1 flex flex-col"
           >
             <div class="absolute -top-6 left-6">
               <div
@@ -81,11 +85,7 @@ import SectionDecoration from "./SectionDecoration.astro";
       <div data-animate="slide-up" style="transition-delay: 0.15s">
         <div class="relative group h-full">
           <div
-            class="absolute inset-0 bg-info rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition duration-300 transform group-hover:scale-105"
-          >
-          </div>
-          <div
-            class="relative h-full bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col"
+            class="relative h-full bg-white p-6 rounded-lg shadow-md group-hover:shadow-[0_10px_25px_-5px_hsl(var(--info)/0.3)] transition-all duration-300 transform group-hover:-translate-y-1 flex flex-col"
           >
             <div class="absolute -top-6 left-6">
               <div
@@ -126,11 +126,7 @@ import SectionDecoration from "./SectionDecoration.astro";
       <div data-animate="slide-up" style="transition-delay: 0.2s">
         <div class="relative group h-full">
           <div
-            class="absolute inset-0 bg-success rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition duration-300 transform group-hover:scale-105"
-          >
-          </div>
-          <div
-            class="relative h-full bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col"
+            class="relative h-full bg-white p-6 rounded-lg shadow-md group-hover:shadow-[0_10px_25px_-5px_hsl(var(--success)/0.3)] transition-all duration-300 transform group-hover:-translate-y-1 flex flex-col"
           >
             <div class="absolute -top-6 left-6">
               <div
@@ -171,15 +167,11 @@ import SectionDecoration from "./SectionDecoration.astro";
       <div data-animate="slide-up" style="transition-delay: 0.25s">
         <div class="relative group h-full">
           <div
-            class="absolute inset-0 bg-warning rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition duration-300 transform group-hover:scale-105"
-          >
-          </div>
-          <div
-            class="relative h-full bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col"
+            class="relative h-full bg-white p-6 rounded-lg shadow-md group-hover:shadow-[0_10px_25px_-5px_hsl(var(--accent)/0.3)] transition-all duration-300 transform group-hover:-translate-y-1 flex flex-col"
           >
             <div class="absolute -top-6 left-6">
               <div
-                class="flex items-center justify-center w-12 h-12 bg-warning rounded-full text-warning-foreground shadow-lg"
+                class="flex items-center justify-center w-12 h-12 bg-accent rounded-full text-accent-foreground shadow-lg"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -216,15 +208,11 @@ import SectionDecoration from "./SectionDecoration.astro";
       <div data-animate="slide-up" style="transition-delay: 0.3s">
         <div class="relative group h-full">
           <div
-            class="absolute inset-0 bg-destructive rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition duration-300 transform group-hover:scale-105"
-          >
-          </div>
-          <div
-            class="relative h-full bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col"
+            class="relative h-full bg-white p-6 rounded-lg shadow-md group-hover:shadow-[0_10px_25px_-5px_hsl(var(--secondary)/0.3)] transition-all duration-300 transform group-hover:-translate-y-1 flex flex-col"
           >
             <div class="absolute -top-6 left-6">
               <div
-                class="flex items-center justify-center w-12 h-12 bg-destructive rounded-full text-destructive-foreground shadow-lg"
+                class="flex items-center justify-center w-12 h-12 bg-secondary rounded-full text-secondary-foreground shadow-lg"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -261,11 +249,7 @@ import SectionDecoration from "./SectionDecoration.astro";
       <div data-animate="slide-up" style="transition-delay: 0.35s">
         <div class="relative group h-full">
           <div
-            class="absolute inset-0 bg-gradient-to-r from-primary to-info rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition duration-300 transform group-hover:scale-105"
-          >
-          </div>
-          <div
-            class="relative h-full bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col"
+            class="relative h-full bg-white p-6 rounded-lg shadow-md group-hover:shadow-[0_10px_25px_-5px_hsl(var(--primary)/0.3)] transition-all duration-300 transform group-hover:-translate-y-1 flex flex-col"
           >
             <div class="absolute -top-6 left-6">
               <div
@@ -306,11 +290,7 @@ import SectionDecoration from "./SectionDecoration.astro";
       <div data-animate="slide-up" style="transition-delay: 0.4s">
         <div class="relative group h-full">
           <div
-            class="absolute inset-0 bg-gradient-to-r from-info to-success rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition duration-300 transform group-hover:scale-105"
-          >
-          </div>
-          <div
-            class="relative h-full bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col"
+            class="relative h-full bg-white p-6 rounded-lg shadow-md group-hover:shadow-[0_10px_25px_-5px_hsl(var(--info)/0.3)] transition-all duration-300 transform group-hover:-translate-y-1 flex flex-col"
           >
             <div class="absolute -top-6 left-6">
               <div
@@ -351,15 +331,11 @@ import SectionDecoration from "./SectionDecoration.astro";
       <div data-animate="slide-up" style="transition-delay: 0.45s">
         <div class="relative group h-full">
           <div
-            class="absolute inset-0 bg-gradient-to-r from-secondary to-destructive rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition duration-300 transform group-hover:scale-105"
-          >
-          </div>
-          <div
-            class="relative h-full bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col"
+            class="relative h-full bg-white p-6 rounded-lg shadow-md group-hover:shadow-[0_10px_25px_-5px_hsl(var(--secondary)/0.3)] transition-all duration-300 transform group-hover:-translate-y-1 flex flex-col"
           >
             <div class="absolute -top-6 left-6">
               <div
-                class="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-secondary to-destructive rounded-full text-white shadow-lg"
+                class="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-secondary to-primary rounded-full text-white shadow-lg"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -396,15 +372,11 @@ import SectionDecoration from "./SectionDecoration.astro";
       <div data-animate="slide-up" style="transition-delay: 0.5s">
         <div class="relative group h-full">
           <div
-            class="absolute inset-0 bg-gradient-to-r from-accent to-warning rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition duration-300 transform group-hover:scale-105"
-          >
-          </div>
-          <div
-            class="relative h-full bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col"
+            class="relative h-full bg-white p-6 rounded-lg shadow-md group-hover:shadow-[0_10px_25px_-5px_hsl(var(--accent)/0.3)] transition-all duration-300 transform group-hover:-translate-y-1 flex flex-col"
           >
             <div class="absolute -top-6 left-6">
               <div
-                class="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-accent to-warning rounded-full text-accent-foreground shadow-lg"
+                class="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-accent to-secondary rounded-full text-accent-foreground shadow-lg"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -466,7 +438,7 @@ import SectionDecoration from "./SectionDecoration.astro";
   <SectionDivider
     variant="zigzag"
     position="bottom"
-    color="#E7E8E9"
+    color="hsl(var(--background))"
     bgColor="white"
   />
 </section>

@@ -73,75 +73,75 @@ export const MainNav = () => {
                         Domaines d'expertise
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                        <ul className="grid w-[400px] gap-3 p-6 md:w-[600px] md:grid-cols-3 bg-white rounded-lg shadow-lg animate-in fade-in zoom-in-95 duration-200">
+                        <ul className="grid w-[400px] gap-3 p-6 md:w-[600px] md:grid-cols-3 bg-card rounded-lg shadow-lg animate-in fade-in zoom-in-95 duration-200">
                             <li>
-                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-caribbean-500/10 rounded-md transition-colors duration-200">
+                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-secondary/10 rounded-md transition-colors duration-200">
                                     <div className="font-medium mb-1">Droit Fiscal</div>
-                                    <p className="text-sm text-gray-600">
+                                    <p className="text-sm text-muted-foreground">
                                         Optimisation fiscale et contentieux
                                     </p>
                                 </NavigationMenuLink>
                             </li>
                             <li>
-                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-caribbean-500/10 rounded-md transition-colors duration-200">
+                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-secondary/10 rounded-md transition-colors duration-200">
                                     <div className="font-medium mb-1">Droit des Affaires</div>
-                                    <p className="text-sm text-gray-600">
+                                    <p className="text-sm text-muted-foreground">
                                         Conseil aux entreprises et contentieux
                                     </p>
                                 </NavigationMenuLink>
                             </li>
                             <li>
-                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-caribbean-500/10 rounded-md transition-colors duration-200">
+                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-secondary/10 rounded-md transition-colors duration-200">
                                     <div className="font-medium mb-1">Droit Social</div>
-                                    <p className="text-sm text-gray-600">
+                                    <p className="text-sm text-muted-foreground">
                                         Relations de travail et contentieux
                                     </p>
                                 </NavigationMenuLink>
                             </li>
                             <li>
-                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-caribbean-500/10 rounded-md transition-colors duration-200">
+                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-secondary/10 rounded-md transition-colors duration-200">
                                     <div className="font-medium mb-1">Droit de la Famille</div>
-                                    <p className="text-sm text-gray-600">
+                                    <p className="text-sm text-muted-foreground">
                                         Divorce, succession et contentieux
                                     </p>
                                 </NavigationMenuLink>
                             </li>
                             <li>
-                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-caribbean-500/10 rounded-md transition-colors duration-200">
+                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-secondary/10 rounded-md transition-colors duration-200">
                                     <div className="font-medium mb-1">Propriété Intellectuelle</div>
-                                    <p className="text-sm text-gray-600">
+                                    <p className="text-sm text-muted-foreground">
                                         Marques, brevets, droits d'auteur
                                     </p>
                                 </NavigationMenuLink>
                             </li>
                             <li>
-                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-caribbean-500/10 rounded-md transition-colors duration-200">
+                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-secondary/10 rounded-md transition-colors duration-200">
                                     <div className="font-medium mb-1">Contentieux Divers</div>
-                                    <p className="text-sm text-gray-600">
+                                    <p className="text-sm text-muted-foreground">
                                         Représentation devant les juridictions
                                     </p>
                                 </NavigationMenuLink>
                             </li>
                             <li>
-                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-caribbean-500/10 rounded-md transition-colors duration-200">
+                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-secondary/10 rounded-md transition-colors duration-200">
                                     <div className="font-medium mb-1">Rédactions d'Actes</div>
-                                    <p className="text-sm text-gray-600">
+                                    <p className="text-sm text-muted-foreground">
                                         Contrats, statuts, baux
                                     </p>
                                 </NavigationMenuLink>
                             </li>
                             <li>
-                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-caribbean-500/10 rounded-md transition-colors duration-200">
+                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-secondary/10 rounded-md transition-colors duration-200">
                                     <div className="font-medium mb-1">Droit Immobilier</div>
-                                    <p className="text-sm text-gray-600">
+                                    <p className="text-sm text-muted-foreground">
                                         Construction, baux, copropriété
                                     </p>
                                 </NavigationMenuLink>
                             </li>
                             <li>
-                                    <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-caribbean-500/10 rounded-md transition-colors duration-200">
+                                <NavigationMenuLink href="#expertise" className="block p-3 hover:bg-secondary/10 rounded-md transition-colors duration-200">
                                     <div className="font-medium mb-1">Droit des Contrats</div>
-                                    <p className="text-sm text-gray-600">
+                                    <p className="text-sm text-muted-foreground">
                                         Négociation, rédaction, analyse
                                     </p>
                                 </NavigationMenuLink>

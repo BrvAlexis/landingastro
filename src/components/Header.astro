@@ -66,7 +66,7 @@ import { ActionButtons } from "./ActionButtons";
   </div>
 
   <!-- Menu mobile/tablette - caché par défaut -->
-  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t shadow-md">
+  <div id="mobile-menu" class="hidden lg:hidden bg-card border-t shadow-md">
     <div class="max-w-[90%] mx-auto py-4">
       <div class="mb-6">
         <MainNav client:load />
@@ -126,13 +126,13 @@ import { ActionButtons } from "./ActionButtons";
   .logo-line-2 {
     font-size: 16px;
     font-weight: bold;
-    fill: rgb(17, 24, 39); /* text-gray-900 */
+    fill: hsl(var(--foreground));
   }
 
   .logo-subtitle {
     font-size: 12px;
     font-weight: 300;
-    fill: rgb(55, 65, 81); /* text-gray-700 */
+    fill: hsl(var(--muted-foreground));
   }
 
   /* Responsive adjustments */

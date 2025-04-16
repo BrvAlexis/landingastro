@@ -4,8 +4,16 @@ import SectionDecoration from "./SectionDecoration.astro";
 ---
 
 <section class="relative py-24 bg-white" id="valeurs">
-  <SectionDecoration variant="dots" position="top-right" color="#3c6e71" />
-  <SectionDecoration variant="circles" position="bottom-left" color="#284b63" />
+  <SectionDecoration
+    variant="dots"
+    position="top-right"
+    color="hsl(var(--secondary))"
+  />
+  <SectionDecoration
+    variant="circles"
+    position="bottom-left"
+    color="hsl(var(--primary))"
+  />
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center mb-16" data-animate="fade-in">
@@ -33,14 +41,14 @@ import SectionDecoration from "./SectionDecoration.astro";
         style="transition-delay: 0.1s"
       >
         <div
-          class="absolute inset-0 bg-gradient-to-r from-primary to-info rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition duration-300 transform group-hover:scale-105"
+          class="absolute inset-0 bg-gradient-to-r from-secondary to-primary rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition duration-300 transform group-hover:scale-105"
         >
         </div>
         <div
-          class="relative h-full bg-white rounded-xl shadow-md px-6 py-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          class="relative h-full bg-white rounded-xl shadow-md px-6 py-8 group-hover:shadow-[0_10px_25px_-5px_hsl(var(--primary)/0.15)] transition-all duration-300 transform group-hover:-translate-y-1"
         >
           <div
-            class="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary to-info rounded-full mb-6 text-white"
+            class="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full mb-6 text-white"
           >
             <svg
               class="h-8 w-8"
@@ -73,14 +81,14 @@ import SectionDecoration from "./SectionDecoration.astro";
         style="transition-delay: 0.2s"
       >
         <div
-          class="absolute inset-0 bg-gradient-to-r from-info to-success rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition duration-300 transform group-hover:scale-105"
+          class="absolute inset-0 bg-gradient-to-r from-secondary to-primary rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition duration-300 transform group-hover:scale-105"
         >
         </div>
         <div
-          class="relative h-full bg-white rounded-xl shadow-md px-6 py-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          class="relative h-full bg-white rounded-xl shadow-md px-6 py-8 group-hover:shadow-[0_10px_25px_-5px_hsl(var(--secondary)/0.15)] transition-all duration-300 transform group-hover:-translate-y-1"
         >
           <div
-            class="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-info to-success rounded-full mb-6 text-white"
+            class="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-secondary to-primary rounded-full mb-6 text-white"
           >
             <svg
               class="h-8 w-8"
@@ -113,14 +121,14 @@ import SectionDecoration from "./SectionDecoration.astro";
         style="transition-delay: 0.3s"
       >
         <div
-          class="absolute inset-0 bg-gradient-to-r from-success to-warning rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition duration-300 transform group-hover:scale-105"
+          class="absolute inset-0 bg-gradient-to-r from-secondary to-primary rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition duration-300 transform group-hover:scale-105"
         >
         </div>
         <div
-          class="relative h-full bg-white rounded-xl shadow-md px-6 py-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          class="relative h-full bg-white rounded-xl shadow-md px-6 py-8 group-hover:shadow-[0_10px_25px_-5px_hsl(var(--secondary)/0.15)] transition-all duration-300 transform group-hover:-translate-y-1"
         >
           <div
-            class="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-success to-warning rounded-full mb-6 text-white"
+            class="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-secondary to-secondary/70 rounded-full mb-6 text-white"
           >
             <svg
               class="h-8 w-8"
@@ -147,14 +155,14 @@ import SectionDecoration from "./SectionDecoration.astro";
 
     <div class="mt-20 pt-16 border-t border-gray-200/70" data-animate="fade-in">
       <h3
-        class="text-3xl font-bold text-gray-900 mb-12 text-center welcome-font"
+        class="text-3xl font-bold text-gray-900 mb-16 text-center welcome-font"
       >
         Nos exigences professionnelles
       </h3>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
         <!-- Pilier Rigueur -->
         <div
-          class="group relative text-center p-6 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-lg"
+          class="group relative text-center p-6 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-[0_8px_20px_-4px_hsl(var(--primary)/0.1)]"
           data-animate="slide-up"
           style="transition-delay: 0.1s"
         >
@@ -198,7 +206,7 @@ import SectionDecoration from "./SectionDecoration.astro";
 
         <!-- Pilier Efficacité -->
         <div
-          class="group relative text-center p-6 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-lg"
+          class="group relative text-center p-6 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-[0_8px_20px_-4px_hsl(var(--secondary)/0.1)]"
           data-animate="slide-up"
           style="transition-delay: 0.2s"
         >
@@ -206,7 +214,7 @@ import SectionDecoration from "./SectionDecoration.astro";
             class="absolute -top-7 left-1/2 transform -translate-x-1/2 transition-all duration-300 group-hover:scale-110"
           >
             <div
-              class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-info to-info/70 rounded-full shadow-lg mx-auto text-white animate-float animation-delay-500"
+              class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-secondary to-secondary/70 rounded-full shadow-lg mx-auto text-white animate-float animation-delay-500"
             >
               <svg
                 class="h-8 w-8 transition-transform duration-300 group-hover:-rotate-12"
@@ -234,14 +242,14 @@ import SectionDecoration from "./SectionDecoration.astro";
             atteindre vos objectifs rapidement.
           </p>
           <div
-            class="absolute inset-x-0 bottom-0 h-1 bg-info rounded-b-xl scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+            class="absolute inset-x-0 bottom-0 h-1 bg-secondary rounded-b-xl scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
           >
           </div>
         </div>
 
         <!-- Pilier Réactivité -->
         <div
-          class="group relative text-center p-6 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-lg"
+          class="group relative text-center p-6 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-[0_8px_20px_-4px_hsl(var(--secondary)/0.1)]"
           data-animate="slide-up"
           style="transition-delay: 0.3s"
         >
@@ -249,7 +257,7 @@ import SectionDecoration from "./SectionDecoration.astro";
             class="absolute -top-7 left-1/2 transform -translate-x-1/2 transition-all duration-300 group-hover:scale-110"
           >
             <div
-              class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-success to-success/70 rounded-full shadow-lg mx-auto text-white animate-float animation-delay-1000"
+              class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-secondary to-secondary/70 rounded-full shadow-lg mx-auto text-white animate-float animation-delay-1000"
             >
               <svg
                 class="h-8 w-8 transition-transform duration-300 group-hover:rotate-12"
@@ -277,7 +285,7 @@ import SectionDecoration from "./SectionDecoration.astro";
             demandes dans les meilleurs délais.
           </p>
           <div
-            class="absolute inset-x-0 bottom-0 h-1 bg-success rounded-b-xl scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+            class="absolute inset-x-0 bottom-0 h-1 bg-secondary rounded-b-xl scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
           >
           </div>
         </div>
@@ -312,30 +320,7 @@ import SectionDecoration from "./SectionDecoration.astro";
   <SectionDivider
     variant="wave"
     position="bottom"
-    color="#E7E8E9"
+    color="hsl(var(--background))"
     bgColor="white"
   />
 </section>
-
-<style>
-  @keyframes float {
-    0% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-8px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
-  .animate-float {
-    animation: float 3s ease-in-out infinite;
-  }
-  .animation-delay-500 {
-    animation-delay: 0.5s;
-  }
-  .animation-delay-1000 {
-    animation-delay: 1s;
-  }
-</style>
