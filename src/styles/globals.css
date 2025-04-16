@@ -8,49 +8,76 @@
 @layer base {
     :root {
         --background: 0 0% 100%;
-        --foreground: 222.2 84% 4.9%;
+        /* blanc */
+        --foreground: 0 0% 21%;
+        /* jet-500 #353535 */
 
         --card: 0 0% 100%;
-        --card-foreground: 222.2 84% 4.9%;
+        /* blanc */
+        --card-foreground: 0 0% 21%;
+        /* jet-500 */
 
         --popover: 0 0% 100%;
-        --popover-foreground: 222.2 84% 4.9%;
+        /* blanc */
+        --popover-foreground: 0 0% 21%;
+        /* jet-500 */
 
-        --primary: 350 10% 65%;
-        --primary-foreground: 210 40% 98%;
+        --primary: 197 43% 27%;
+        /* indigo-500 #284b63 */
+        --primary-foreground: 0 0% 100%;
+        /* blanc */
 
-        --secondary: 210 40% 96.1%;
-        --secondary-foreground: 222.2 47.4% 11.2%;
+        --secondary: 182 30% 34%;
+        /* caribbean-500 #3c6e71 */
+        --secondary-foreground: 0 0% 100%;
+        /* blanc */
 
-        --muted: 210 40% 96.1%;
-        --muted-foreground: 215.4 16.3% 46.9%;
+        --muted: 0 0% 85%;
+        /* platinum-500 #d9d9d9 */
+        --muted-foreground: 0 0% 21%;
+        /* jet-500 */
 
-        --accent: 210 40% 96.1%;
-        --accent-foreground: 222.2 47.4% 11.2%;
+        --accent: 182 30% 34%;
+        /* caribbean-500 */
+        --accent-foreground: 0 0% 100%;
+        /* blanc */
 
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 210 40% 98%;
+        --destructive: 358 68% 54%;
+        /* #D64045 */
+        --destructive-foreground: 0 0% 100%;
 
-        --info: 175 10% 45%;
-        --info-foreground: 210 40% 98%;
+        --info: 204 48% 41%;
+        /* indigo-600 #3e7397 */
+        --info-foreground: 0 0% 100%;
 
         --success: 142 38% 54%;
-        --success-foreground: 210 40% 98%;
+        /* Gardé tel quel */
+        --success-foreground: 0 0% 100%;
 
-        --warning: 36 80% 55%;
-        --warning-foreground: 210 40% 98%;
+        --warning: 36 91% 55%;
+        /* #F5A623 */
+        --warning-foreground: 0 0% 10%;
 
-        --border: 214.3 31.8% 91.4%;
-        --input: 214.3 31.8% 91.4%;
-        --ring: 222.2 84% 4.9%;
+        --border: 0 0% 85%;
+        /* platinum-500 */
+        --input: 0 0% 85%;
+        /* platinum-500 */
+        --ring: 197 43% 27%;
+        /* indigo-500 */
 
         --radius: 0.5rem;
 
-        --chart-1: var(--primary);
-        --chart-2: var(--info);
-        --chart-3: var(--success);
-        --chart-4: var(--warning);
-        --chart-5: var(--destructive);
+        /* Charts avec les nouvelles couleurs */
+        --chart-1: 197 43% 27%;
+        /* indigo */
+        --chart-2: 182 30% 34%;
+        /* caribbean */
+        --chart-3: 0 0% 85%;
+        /* platinum */
+        --chart-4: 204 48% 41%;
+        /* indigo-600 */
+        --chart-5: 182 30% 67%;
+        /* caribbean-800 */
     }
 
     .dark {

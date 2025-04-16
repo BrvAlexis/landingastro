@@ -11,7 +11,7 @@ export default function FooterAccordionWrapper() {
     <div className="w-full space-y-4">
       <Accordion type="multiple" className="w-full">
         {/* Informations légales */}
-        <AccordionItem value="legal-info" className="border-gray-800">
+        <AccordionItem value="legal-info" className="border-jet-300">
           <AccordionTrigger className="text-lg font-semibold text-white py-3 px-2">
             <span className="whitespace-nowrap">Informations Légales</span>
           </AccordionTrigger>
@@ -27,7 +27,7 @@ export default function FooterAccordionWrapper() {
         </AccordionItem>
 
         {/* Mentions légales */}
-        <AccordionItem value="legal-mentions" className="border-gray-800">
+        <AccordionItem value="legal-mentions" className="border-jet-300">
           <AccordionTrigger className="text-lg font-semibold text-white py-3 px-2">
             <span className="whitespace-nowrap">Mentions Légales</span>
           </AccordionTrigger>
@@ -38,7 +38,9 @@ export default function FooterAccordionWrapper() {
                   href="/mentions-legales"
                   className="hover:text-white transition-colors text-sm flex items-center"
                 >
-                  <span className="text-info mr-1 flex-shrink-0">›</span>
+                  <span className="text-caribbean-500 mr-1 flex-shrink-0">
+                    ›
+                  </span>
                   <span className="break-words">Mentions légales</span>
                 </a>
               </li>
@@ -47,7 +49,9 @@ export default function FooterAccordionWrapper() {
                   href="/cgv"
                   className="hover:text-white transition-colors text-sm flex items-center"
                 >
-                  <span className="text-info mr-1 flex-shrink-0">›</span>
+                  <span className="text-caribbean-500 mr-1 flex-shrink-0">
+                    ›
+                  </span>
                   <span className="break-words">CGV</span>
                 </a>
               </li>
@@ -56,7 +60,9 @@ export default function FooterAccordionWrapper() {
                   href="/politique-confidentialite"
                   className="hover:text-white transition-colors text-sm flex items-center"
                 >
-                  <span className="text-info mr-1 flex-shrink-0">›</span>
+                  <span className="text-caribbean-500 mr-1 flex-shrink-0">
+                    ›
+                  </span>
                   <span className="break-words">
                     Politique de confidentialité
                   </span>
@@ -67,7 +73,9 @@ export default function FooterAccordionWrapper() {
                   href="/cookies"
                   className="hover:text-white transition-colors text-sm flex items-center"
                 >
-                  <span className="text-info mr-1 flex-shrink-0">›</span>
+                  <span className="text-caribbean-500 mr-1 flex-shrink-0">
+                    ›
+                  </span>
                   <span className="break-words">Gestion des cookies</span>
                 </a>
               </li>
@@ -76,7 +84,7 @@ export default function FooterAccordionWrapper() {
         </AccordionItem>
 
         {/* Réglementations */}
-        <AccordionItem value="regulations" className="border-gray-800">
+        <AccordionItem value="regulations" className="border-jet-300">
           <AccordionTrigger className="text-lg font-semibold text-white py-3 px-2">
             <span className="whitespace-nowrap">Réglementations</span>
           </AccordionTrigger>
@@ -97,7 +105,7 @@ export default function FooterAccordionWrapper() {
         </AccordionItem>
 
         {/* Contact */}
-        <AccordionItem value="contact" className="border-gray-800">
+        <AccordionItem value="contact" className="border-jet-300">
           <AccordionTrigger className="text-lg font-semibold text-white py-3 px-2">
             <span className="whitespace-nowrap">Contact</span>
           </AccordionTrigger>
@@ -106,7 +114,7 @@ export default function FooterAccordionWrapper() {
               <li className="text-sm flex items-start">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-info mr-2 mt-0.5 flex-shrink-0"
+                  className="h-4 w-4 text-caribbean-500 mr-2 mt-0.5 flex-shrink-0"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -133,7 +141,7 @@ export default function FooterAccordionWrapper() {
               <li className="text-sm flex items-start">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-info mr-2 mt-0.5 flex-shrink-0"
+                  className="h-4 w-4 text-caribbean-500 mr-2 mt-0.5 flex-shrink-0"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -155,7 +163,7 @@ export default function FooterAccordionWrapper() {
               <li className="text-sm flex items-start">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-info mr-2 mt-0.5 flex-shrink-0"
+                  className="h-4 w-4 text-caribbean-500 mr-2 mt-0.5 flex-shrink-0"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

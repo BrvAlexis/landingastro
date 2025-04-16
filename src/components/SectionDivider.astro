@@ -11,8 +11,8 @@ const {
   variant = "wave",
   position = "bottom",
   flip = false,
-  color = "#E7E8E9",
-  bgColor = "white",
+  color = "rgb(var(--platinum-500, #d9d9d9))",
+  bgColor = "rgb(var(--white, #ffffff))",
 } = Astro.props;
 
 // Déterminer la classe de position
@@ -67,4 +67,3 @@ switch (variant) {
     height: 100%;
   }
 </style>
-

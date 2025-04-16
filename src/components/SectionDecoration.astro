@@ -9,7 +9,7 @@ interface Props {
 const {
   variant = "dots",
   position = "top-right",
-  color = "var(--primary)",
+  color = "rgb(var(--caribbean-500, #3c6e71))",
   size = "md",
 } = Astro.props;
 
@@ -107,4 +107,3 @@ switch (variant) {
     <Fragment set:html={svgContent} />
   </svg>
 </div>
-
