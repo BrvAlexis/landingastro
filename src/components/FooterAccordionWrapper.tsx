@@ -10,107 +10,193 @@ export default function FooterAccordionWrapper() {
   return (
     <div className="w-full space-y-4">
       <Accordion type="multiple" className="w-full">
-        {/* Informations légales */}
-        <AccordionItem value="legal-info" className="border-jet-300">
-          <AccordionTrigger className="text-lg font-semibold text-white py-3 px-2">
-            <span className="whitespace-nowrap">Informations Légales</span>
+        {/* Le Cabinet */}
+        <AccordionItem value="cabinet-info" className="border-platinum-300">
+          <AccordionTrigger className="text-lg font-semibold text-jet-500 py-3 px-2 text-left">
+            <span className="flex items-center">
+              <span className="inline-block w-1.5 h-1.5 bg-caribbean-500 rounded-full mr-2"></span>
+              Le Cabinet
+            </span>
           </AccordionTrigger>
           <AccordionContent className="px-2">
-            <ul className="space-y-2">
-              <li className="text-sm">Cabinet Fiscal Expert SARL</li>
-              <li className="text-sm">SIREN : 123 456 789</li>
-              <li className="text-sm">RCS Paris B 123 456 789</li>
-              <li className="text-sm">Capital social : 50 000€</li>
-              <li className="text-sm">N° TVA : FR 12 345 678 901</li>
-            </ul>
-          </AccordionContent>
-        </AccordionItem>
-
-        {/* Mentions légales */}
-        <AccordionItem value="legal-mentions" className="border-jet-300">
-          <AccordionTrigger className="text-lg font-semibold text-white py-3 px-2">
-            <span className="whitespace-nowrap">Mentions Légales</span>
-          </AccordionTrigger>
-          <AccordionContent className="px-2">
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="/mentions-legales"
-                  className="hover:text-white transition-colors text-sm flex items-center"
-                >
-                  <span className="text-caribbean-500 mr-1 flex-shrink-0">
-                    ›
-                  </span>
-                  <span className="break-words">Mentions légales</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/cgv"
-                  className="hover:text-white transition-colors text-sm flex items-center"
-                >
-                  <span className="text-caribbean-500 mr-1 flex-shrink-0">
-                    ›
-                  </span>
-                  <span className="break-words">CGV</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/politique-confidentialite"
-                  className="hover:text-white transition-colors text-sm flex items-center"
-                >
-                  <span className="text-caribbean-500 mr-1 flex-shrink-0">
-                    ›
-                  </span>
-                  <span className="break-words">
-                    Politique de confidentialité
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/cookies"
-                  className="hover:text-white transition-colors text-sm flex items-center"
-                >
-                  <span className="text-caribbean-500 mr-1 flex-shrink-0">
-                    ›
-                  </span>
-                  <span className="break-words">Gestion des cookies</span>
-                </a>
+            <ul className="space-y-2 text-jet-400">
+              <li className="text-sm">SCP Crouzatier / Pobéda-Thomas</li>
+              <li className="text-sm">Cabinet d'avocats</li>
+              <li className="text-sm">Structure de proximité</li>
+              <li className="text-sm">Relation directe avec ses clients</li>
+              <li className="text-sm">
+                Clientèle variée: entreprises, particuliers, associations
               </li>
             </ul>
           </AccordionContent>
         </AccordionItem>
 
-        {/* Réglementations */}
-        <AccordionItem value="regulations" className="border-jet-300">
-          <AccordionTrigger className="text-lg font-semibold text-white py-3 px-2">
-            <span className="whitespace-nowrap">Réglementations</span>
+        {/* Domaines d'expertise */}
+        <AccordionItem
+          value="expertise-domaines"
+          className="border-platinum-300"
+        >
+          <AccordionTrigger className="text-lg font-semibold text-jet-500 py-3 px-2 text-left">
+            <span className="flex items-center">
+              <span className="inline-block w-1.5 h-1.5 bg-caribbean-500 rounded-full mr-2"></span>
+              Domaines d'expertise
+            </span>
           </AccordionTrigger>
           <AccordionContent className="px-2">
             <ul className="space-y-2">
-              <li className="text-sm">
-                Membre de l'Ordre des Experts-Comptables
+              <li>
+                <a
+                  href="#expertise"
+                  className="hover:text-caribbean-500 transition-colors text-sm flex items-center"
+                >
+                  <span className="text-caribbean-500 mr-1 flex-shrink-0">
+                    ›
+                  </span>{" "}
+                  Droit fiscal
+                </a>
               </li>
-              <li className="text-sm break-words">
-                Inscrit au Tableau de l'Ordre de la région Paris Île-de-France
+              <li>
+                <a
+                  href="#expertise"
+                  className="hover:text-caribbean-500 transition-colors text-sm flex items-center"
+                >
+                  <span className="text-caribbean-500 mr-1 flex-shrink-0">
+                    ›
+                  </span>{" "}
+                  Droit des affaires
+                </a>
               </li>
-              <li className="text-sm">
-                Assurance RCP : AXA France n°123456789
+              <li>
+                <a
+                  href="#expertise"
+                  className="hover:text-caribbean-500 transition-colors text-sm flex items-center"
+                >
+                  <span className="text-caribbean-500 mr-1 flex-shrink-0">
+                    ›
+                  </span>{" "}
+                  Droit social
+                </a>
               </li>
-              <li className="text-sm">Agrément AMF n°GP123456</li>
+              <li>
+                <a
+                  href="#expertise"
+                  className="hover:text-caribbean-500 transition-colors text-sm flex items-center"
+                >
+                  <span className="text-caribbean-500 mr-1 flex-shrink-0">
+                    ›
+                  </span>{" "}
+                  Droit de la famille
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#expertise"
+                  className="hover:text-caribbean-500 transition-colors text-sm flex items-center"
+                >
+                  <span className="text-caribbean-500 mr-1 flex-shrink-0">
+                    ›
+                  </span>{" "}
+                  Propriété Intellectuelle
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#expertise"
+                  className="hover:text-caribbean-500 transition-colors text-sm flex items-center"
+                >
+                  <span className="text-caribbean-500 mr-1 flex-shrink-0">
+                    ›
+                  </span>{" "}
+                  Contentieux Divers
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#expertise"
+                  className="hover:text-caribbean-500 transition-colors text-sm flex items-center"
+                >
+                  <span className="text-caribbean-500 mr-1 flex-shrink-0">
+                    ›
+                  </span>{" "}
+                  Rédactions d'Actes
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#expertise"
+                  className="hover:text-caribbean-500 transition-colors text-sm flex items-center"
+                >
+                  <span className="text-caribbean-500 mr-1 flex-shrink-0">
+                    ›
+                  </span>{" "}
+                  Droit Immobilier
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#expertise"
+                  className="hover:text-caribbean-500 transition-colors text-sm flex items-center"
+                >
+                  <span className="text-caribbean-500 mr-1 flex-shrink-0">
+                    ›
+                  </span>{" "}
+                  Droit des Contrats
+                </a>
+              </li>
+            </ul>
+          </AccordionContent>
+        </AccordionItem>
+
+        {/* Nos Avocats */}
+        <AccordionItem value="avocats" className="border-platinum-300">
+          <AccordionTrigger className="text-lg font-semibold text-jet-500 py-3 px-2 text-left">
+            <span className="flex items-center">
+              <span className="inline-block w-1.5 h-1.5 bg-caribbean-500 rounded-full mr-2"></span>
+              Nos Avocats
+            </span>
+          </AccordionTrigger>
+          <AccordionContent className="px-2">
+            <ul className="space-y-2 text-jet-400">
+              <li>
+                <a
+                  href="#equipe"
+                  className="hover:text-caribbean-500 transition-colors text-sm flex items-center"
+                >
+                  <span className="text-caribbean-500 mr-1 flex-shrink-0">
+                    ›
+                  </span>{" "}
+                  Me Yves Crouzatier
+                </a>
+              </li>
+              <li className="text-sm pl-5">Spécialiste en droit fiscal</li>
+              <li className="mt-1">
+                <a
+                  href="#equipe"
+                  className="hover:text-caribbean-500 transition-colors text-sm flex items-center"
+                >
+                  <span className="text-caribbean-500 mr-1 flex-shrink-0">
+                    ›
+                  </span>{" "}
+                  Me Florence Pobéda-Thomas
+                </a>
+              </li>
+              <li className="text-sm pl-5">
+                Spécialiste en droit de la famille et droit du travail
+              </li>
             </ul>
           </AccordionContent>
         </AccordionItem>
 
         {/* Contact */}
-        <AccordionItem value="contact" className="border-jet-300">
-          <AccordionTrigger className="text-lg font-semibold text-white py-3 px-2">
-            <span className="whitespace-nowrap">Contact</span>
+        <AccordionItem value="contact" className="border-platinum-300">
+          <AccordionTrigger className="text-lg font-semibold text-jet-500 py-3 px-2 text-left">
+            <span className="flex items-center">
+              <span className="inline-block w-1.5 h-1.5 bg-caribbean-500 rounded-full mr-2"></span>
+              Contact
+            </span>
           </AccordionTrigger>
           <AccordionContent className="px-2">
-            <ul className="space-y-2">
+            <ul className="space-y-3 text-jet-400">
               <li className="text-sm flex items-start">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -133,9 +219,9 @@ export default function FooterAccordionWrapper() {
                   ></path>
                 </svg>
                 <span className="break-words">
-                  123 Avenue des Experts
+                  151 Route de Toulouse
                   <br />
-                  75008 Paris
+                  31270 Cugnaux
                 </span>
               </li>
               <li className="text-sm flex items-start">
@@ -154,10 +240,10 @@ export default function FooterAccordionWrapper() {
                   ></path>
                 </svg>
                 <a
-                  href="tel:+33123456789"
-                  className="transition-colors duration-200 hover:text-white break-words"
+                  href="tel:0562872555"
+                  className="transition-colors duration-200 hover:text-caribbean-500 break-words"
                 >
-                  +33 (0)1 23 45 67 89
+                  05 62 87 25 55
                 </a>
               </li>
               <li className="text-sm flex items-start">
@@ -176,13 +262,63 @@ export default function FooterAccordionWrapper() {
                   ></path>
                 </svg>
                 <a
-                  href="mailto:contact@cabinet-fiscal.fr"
-                  className="transition-colors duration-200 hover:text-white break-all"
+                  href="mailto:sep@avocats-diane.fr"
+                  className="transition-colors duration-200 hover:text-caribbean-500 break-all"
                 >
-                  contact@cabinet-fiscal.fr
+                  sep@avocats-diane.fr
                 </a>
               </li>
+              <li className="text-sm flex items-start">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 text-caribbean-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+                <span>
+                  Du Lundi au Vendredi
+                  <br />
+                  8h00 - 18h00
+                </span>
+              </li>
             </ul>
+            {/* Réseaux sociaux */}
+            <div className="mt-4 flex space-x-4">
+              <a
+                href="#"
+                className="text-caribbean-500 hover:text-caribbean-500/80 transition-colors duration-200"
+              >
+                <span className="sr-only">Facebook</span>
+                <svg
+                  className="h-5 w-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path>
+                </svg>
+              </a>
+              <a
+                href="#"
+                className="text-caribbean-500 hover:text-caribbean-500/80 transition-colors duration-200"
+              >
+                <span className="sr-only">LinkedIn</span>
+                <svg
+                  className="h-5 w-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                </svg>
+              </a>
+            </div>
           </AccordionContent>
         </AccordionItem>
       </Accordion>
