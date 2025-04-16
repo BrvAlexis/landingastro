@@ -48,18 +48,6 @@ export default {
 					800: '#a7ced1',
 					900: '#d3e7e8'
 				},
-				white: {
-					DEFAULT: '#ffffff',
-					100: '#333333',
-					200: '#666666',
-					300: '#999999',
-					400: '#cccccc',
-					500: '#ffffff',
-					600: '#ffffff',
-					700: '#ffffff',
-					800: '#ffffff',
-					900: '#ffffff'
-				},
 				platinum: {
 					DEFAULT: '#d9d9d9',
 					100: '#2b2b2b',
@@ -85,51 +73,51 @@ export default {
 					900: '#cadde9'
 				},
 				primary: {
-					DEFAULT: '#284b63',
-					foreground: '#ffffff'
+					DEFAULT: 'hsl(var(--primary))',
+					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
-					DEFAULT: '#3c6e71',
-					foreground: '#ffffff'
+					DEFAULT: 'hsl(var(--secondary))',
+					foreground: 'hsl(var(--secondary-foreground))'
 				},
 				destructive: {
-					DEFAULT: '#D64045',
-					foreground: '#ffffff'
+					DEFAULT: 'hsl(var(--destructive))',
+					foreground: 'hsl(var(--destructive-foreground))'
 				},
 				success: {
-					DEFAULT: '#287D3C',
-					foreground: '#ffffff'
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
 				},
 				warning: {
-					DEFAULT: '#F5A623',
-					foreground: '#1A1A1A'
+					DEFAULT: 'hsl(var(--warning))',
+					foreground: 'hsl(var(--warning-foreground))'
 				},
 				info: {
-					DEFAULT: '#3e7397',
-					foreground: '#ffffff'
+					DEFAULT: 'hsl(var(--info))',
+					foreground: 'hsl(var(--info-foreground))'
 				},
 				muted: {
-					DEFAULT: '#d9d9d9',
-					foreground: '#353535'
+					DEFAULT: 'hsl(var(--muted))',
+					foreground: 'hsl(var(--muted-foreground))'
 				},
 				accent: {
-					DEFAULT: '#3c6e71',
-					foreground: '#ffffff'
+					DEFAULT: 'hsl(var(--accent))',
+					foreground: 'hsl(var(--accent-foreground))'
 				},
 				popover: {
-					DEFAULT: '#ffffff',
-					foreground: '#353535'
+					DEFAULT: 'hsl(var(--popover))',
+					foreground: 'hsl(var(--popover-foreground))'
 				},
 				card: {
-					DEFAULT: '#ffffff',
-					foreground: '#353535'
+					DEFAULT: 'hsl(var(--card))',
+					foreground: 'hsl(var(--card-foreground))'
 				},
 				chart: {
-					'1': '#284b63',
-					'2': '#3c6e71',
-					'3': '#d9d9d9',
-					'4': '#6099be',
-					'5': '#a7ced1'
+					'1': 'hsl(var(--chart-1))',
+					'2': 'hsl(var(--chart-2))',
+					'3': 'hsl(var(--chart-3))',
+					'4': 'hsl(var(--chart-4))',
+					'5': 'hsl(var(--chart-5))'
 				}
 			},
 			borderRadius: {
@@ -139,15 +127,14 @@ export default {
 			},
 			fontFamily: {
 				sans: [
-					'var(--font-sans)',
 					...fontFamily.sans
 				],
 				heading: [
-					'Playfair Display',
+					'var(--font-heading)',
 					'serif'
 				],
 				body: [
-					'Source Sans Pro',
+					'var(--font-body)',
 					'sans-serif'
 				]
 			},
