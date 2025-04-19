@@ -7,6 +7,18 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ContactSelect } from "./ContactSelect";
 import SectionDivider from "./SectionDivider.astro";
 import SectionDecoration from "./SectionDecoration.astro";
+import { ContactForm } from "./ContactForm";
+
+const contactOptions = [
+  { value: "fiscal", label: "Droit fiscal" },
+  { value: "affaires", label: "Droit des affaires" },
+  { value: "social", label: "Droit social" },
+  { value: "famille", label: "Droit de la famille" },
+  { value: "propriete", label: "Droit de la propriété intellectuelle" },
+  { value: "contentieux", label: "Contentieux divers" },
+  { value: "actes", label: "Rédaction d'actes" },
+  { value: "autre", label: "Autre" },
+];
 ---
 
 <section class="relative py-24 bg-white" id="contact">
@@ -244,130 +256,7 @@ import SectionDecoration from "./SectionDecoration.astro";
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <form
-                class="space-y-6"
-                name="contact-cabinet-avocats"
-                method="POST"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                data-netlify-recaptcha="true"
-              >
-                {/* Champ caché pour le honeypot */}
-                <p class="hidden">
-                  <label>
-                    Ne pas remplir si vous êtes humain: <input
-                      name="bot-field"
-                    />
-                  </label>
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div class="space-y-2">
-                    <Label htmlFor="name">Nom complet</Label>
-                    <Input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      client:load
-                      className="scale-hover"
-                    />
-                  </div>
-                  <div class="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      client:load
-                      className="scale-hover"
-                    />
-                  </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div class="space-y-2">
-                    <Label htmlFor="phone">Téléphone</Label>
-                    <Input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      client:load
-                      className="scale-hover"
-                    />
-                  </div>
-                  <div class="space-y-2">
-                    <Label htmlFor="subject">Sujet</Label>
-                    <ContactSelect
-                      client:load
-                      name="subject"
-                      placeholder="Sélectionnez un sujet"
-                      options={[
-                        {
-                          value: "fiscal",
-                          label: "Droit fiscal",
-                        },
-                        { value: "affaires", label: "Droit des affaires" },
-                        { value: "social", label: "Droit social" },
-                        { value: "famille", label: "Droit de la famille" },
-                        {
-                          value: "propriete",
-                          label: "Droit de la propriété intellectuelle",
-                        },
-                        { value: "contentieux", label: "Contentieux divers" },
-                        { value: "actes", label: "Rédaction d'actes" },
-                        { value: "autre", label: "Autre" },
-                      ]}
-                    />
-                  </div>
-                </div>
-                <div class="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    required
-                    client:load
-                    className="scale-hover"
-                  />
-                </div>
-                <div class="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="privacy"
-                    name="privacy"
-                    required
-                    class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"
-                  />
-                  <label for="privacy" class="ml-2 block text-sm text-gray-600">
-                    J'accepte que mes données soient traitées conformément à la <a
-                      href="#"
-                      class="text-info hover:text-info/80"
-                      >politique de confidentialité</a
-                    >.
-                  </label>
-                </div>
-                {/* Ajout du reCAPTCHA */}
-                <div data-netlify-recaptcha="true"></div>
-                <Button
-                  type="submit"
-                  className="w-full scale-hover"
-                  client:load
-                >
-                  <span>Envoyer</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 ml-2"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                </Button>
-              </form>
+              <ContactForm client:load formOptions={contactOptions} />
             </CardContent>
           </Card>
         </div>
