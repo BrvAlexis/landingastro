@@ -1,0 +1,5 @@
+# Redirections Netlify pour avocats-diane.fr
+/defaultsite/* / 301!
+/blog/* / 301!
+/ / 200
+/* /index.html 200 

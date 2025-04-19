@@ -1,0 +1,45 @@
+# Configuration Netlify pour le site avocats-diane.fr
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+# Redirections pour éviter le problème de defaultsite
+[[redirects]]
+  from = "/"
+  to = "/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/defaultsite"
+  to = "/"
+  status = 301
+  force = true
+
+# Bloquer l'accès à la route /blog en redirigeant vers la page d'accueil
+[[redirects]]
+  from = "/blog*"
+  to = "/"
+  status = 301
+  force = true
+
+# Règle par défaut pour gérer les requêtes SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# En-têtes pour améliorer la sécurité et les performances
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), camera=(), microphone=()"
+
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable" 
