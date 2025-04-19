@@ -10,7 +10,7 @@ import netlify from '@astrojs/netlify';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://avocats-cugnaux.fr',
+  site: 'https://www.avocats-diane.fr',
   env: {
     validateSecrets: false, // Valide les secrets au démarrage
   },
@@ -25,5 +25,22 @@ export default defineConfig({
     shield({ sri: { enableStatic: true } }),
   ],
 
-  adapter: netlify(),
+  output: 'server',
+  adapter: netlify({
+    imageCDN: true, // Activer l'optimisation des images via Netlify Image CDN
+    cacheOnDemandPages: true, // Mettre en cache les pages générées à la demande
+  }),
+
+  image: {
+    domains: ['avocats-diane.fr'], // Autorise le domaine pour les images
+    remotePatterns: [{ protocol: "https" }], // Autorise les images HTTPS
+  },
+
+  // Configuration des redirections via Astro
+  redirects: {
+    "/services": {
+      status: 302,
+      destination: "/expertise"
+    }
+  }
 });

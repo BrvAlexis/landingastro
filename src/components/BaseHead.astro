@@ -25,7 +25,7 @@ const {
 } = Astro.props;
 
 // Construction des URLs absolues
-const siteUrl = Astro.site || "https://www.avocats-cugnaux.fr";
+const siteUrl = Astro.site || "https://www.avocats-diane.fr";
 const imageUrl = new URL(image, siteUrl).toString();
 ---
 
@@ -33,6 +33,11 @@ const imageUrl = new URL(image, siteUrl).toString();
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="generator" content={Astro.generator} />
+
+<!-- Préchargement des ressources critiques -->
+<link rel="preload" href="/favicon.svg" as="image" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
 <!-- Sitemap -->
 <link rel="sitemap" href="/sitemap-index.xml" />
@@ -61,27 +66,45 @@ const imageUrl = new URL(image, siteUrl).toString();
 <meta property="og:image:alt" content={imageAlt} />
 <meta property="og:locale" content="fr_FR" />
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={canonicalUrl} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={imageUrl} />
-<meta property="twitter:image:alt" content={imageAlt} />
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalUrl} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageUrl} />
+<meta name="twitter:image:alt" content={imageAlt} />
 
 <!-- Données structurées Schema.org -->
 <script type="application/ld+json" set:html={JSON.stringify(SCHEMA_ORG)} />
 
-<!-- Préconnexion aux ressources externes -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<!-- Données sociales pour Organisation -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SCP Crouzatier Yves / Pobéda-Thomas Florence",
+    "url": "https://www.avocats-diane.fr",
+    "logo": "https://www.avocats-diane.fr/favicon.svg",
+    "sameAs": [
+      "{SOCIAL_MEDIA.facebook}",
+      "{SOCIAL_MEDIA.linkedin}",
+      "{SOCIAL_MEDIA.twitter}",
+      "{SOCIAL_MEDIA.instagram}"
+    ]
+  }
+</script>
 
 <!-- SEO -->
-<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta
+  name="robots"
+  content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+/>
 <meta name="googlebot" content="index, follow" />
 <meta name="rating" content="general" />
 <meta name="geo.region" content="FR-31" />
 <meta name="geo.placename" content="Cugnaux" />
+<meta name="geo.position" content="43.5581832;1.3627580" />
+<meta name="ICBM" content="43.5581832, 1.3627580" />
 
 <!-- Langue -->
 <link rel="alternate" hreflang="fr" href={canonicalUrl} />
@@ -98,5 +121,22 @@ const imageUrl = new URL(image, siteUrl).toString();
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#8B0000" />
 <meta name="msapplication-TileColor" content="#8B0000" />
 <meta name="msapplication-config" content="/browserconfig.xml" />
-<meta name="theme-color" content="#8B0000" />
+<meta
+  name="theme-color"
+  content="#8B0000"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="theme-color"
+  content="#8B0000"
+  media="(prefers-color-scheme: dark)"
+/>
 
+<!-- Performance & Security -->
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.avocats-diane.fr; connect-src 'self';"
+/>
+<meta http-equiv="X-Content-Type-Options" content="nosniff" />
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
