@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import type { FormEvent } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -6,6 +6,17 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Modal } from "@/components/ui/modal";
 import { ContactSelect } from "./ContactSelect";
+
+// Étendre l'interface Window pour inclure grecaptcha
+declare global {
+  interface Window {
+    grecaptcha?: {
+      reset: () => void;
+      execute: () => void;
+      render: (element: HTMLElement, options: any) => void;
+    };
+  }
+}
 
 interface ContactFormProps {
   formOptions: Array<{ value: string; label: string }>;
@@ -16,6 +27,23 @@ export const ContactForm = ({ formOptions }: ContactFormProps) => {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [showErrorModal, setShowErrorModal] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const recaptchaRef = useRef<HTMLDivElement>(null);
+
+  // Effet pour charger le script reCAPTCHA
+  useEffect(() => {
+    // On s'assure que le script n'est chargé qu'une seule fois
+    if (
+      typeof window !== "undefined" &&
+      !window.document.getElementById("netlify-recaptcha-script")
+    ) {
+      const script = document.createElement("script");
+      script.id = "netlify-recaptcha-script";
+      script.src = "https://www.google.com/recaptcha/api.js";
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+  }, []);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -34,6 +62,10 @@ export const ContactForm = ({ formOptions }: ContactFormProps) => {
       if (response.ok) {
         setShowSuccessModal(true);
         form.reset();
+        // Reset le recaptcha si nécessaire
+        if (window.grecaptcha && recaptchaRef.current) {
+          window.grecaptcha.reset();
+        }
       } else {
         throw new Error(`Erreur de soumission: ${response.status}`);
       }
@@ -52,14 +84,36 @@ export const ContactForm = ({ formOptions }: ContactFormProps) => {
 
   return (
     <>
+      {/* Formulaire caché pour Netlify Forms */}
+      <form
+        name="contact-cabinet-avocats"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        data-netlify-recaptcha="true"
+        hidden
+      >
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <select name="subject">
+          {formOptions.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+        <textarea name="message"></textarea>
+        <input type="checkbox" name="privacy" />
+        <input name="bot-field" />
+        <div data-netlify-recaptcha="true"></div>
+      </form>
+
       <form
         className="space-y-6"
         name="contact-cabinet-avocats"
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        data-netlify-recaptcha="true"
-        data-netlify-email="sep@avocats-diane.fr"
         onSubmit={handleSubmit}
       >
         {/* Champ caché pour le honeypot */}
@@ -152,7 +206,7 @@ export const ContactForm = ({ formOptions }: ContactFormProps) => {
         </div>
 
         {/* reCAPTCHA */}
-        <div data-netlify-recaptcha="true"></div>
+        <div data-netlify-recaptcha="true" ref={recaptchaRef}></div>
 
         <Button
           type="submit"

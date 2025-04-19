@@ -21,20 +21,17 @@ export const ContactSelect = ({
   name,
 }: ContactSelectProps) => {
   return (
-    <>
-      <input type="hidden" name="form-name" value={name} />
-      <Select name={name} required>
-        <SelectTrigger>
-          <SelectValue placeholder={placeholder} />
-        </SelectTrigger>
-        <SelectContent>
-          {options.map(({ value, label }) => (
-            <SelectItem key={value} value={value}>
-              {label}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
-    </>
+    <Select name={name} required>
+      <SelectTrigger>
+        <SelectValue placeholder={placeholder} />
+      </SelectTrigger>
+      <SelectContent>
+        {options.map(({ value, label }) => (
+          <SelectItem key={value} value={value}>
+            {label}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
   );
 };
