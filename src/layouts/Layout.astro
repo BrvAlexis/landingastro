@@ -18,6 +18,11 @@ const { title, description = SITE_DESCRIPTION } = Astro.props;
 <html lang="fr">
   <head>
     <BaseHead title={title} description={description} />
+    <!-- Chargement direct des polices pour Safari -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <Header />

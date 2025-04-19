@@ -1,9 +1,22 @@
-/* Importation des polices Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+/* Importation des polices Google Fonts - Commentée car maintenant chargée dans les layouts */
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap'); */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Chargement de secours des polices en cas d'échec */
+@font-face {
+    font-family: 'Playfair Display';
+    src: local('Playfair Display');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: local('Source Sans Pro');
+    font-display: swap;
+}
 
 @layer base {
     :root {
