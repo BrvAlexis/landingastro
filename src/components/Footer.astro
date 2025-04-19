@@ -1,6 +1,9 @@
 ---
 import FooterAccordionWrapper from "./FooterAccordionWrapper";
-const currentYear = new Date().getFullYear();
+// Génère l'année côté serveur uniquement, évitant les problèmes d'hydratation
+const currentYear = new Intl.DateTimeFormat("fr-FR", {
+  year: "numeric",
+}).format(new Date());
 ---
 
 <footer class="relative bg-[#E7E8E9] text-jet-500 overflow-hidden">

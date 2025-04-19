@@ -27,6 +27,11 @@ const {
 // Construction des URLs absolues
 const siteUrl = Astro.site || "https://www.avocats-diane.fr";
 const imageUrl = new URL(image, siteUrl).toString();
+
+// Génère l'année côté serveur uniquement pour éviter les problèmes d'hydratation
+const currentYear = new Intl.DateTimeFormat("fr-FR", {
+  year: "numeric",
+}).format(new Date());
 ---
 
 <!-- Global Metadata -->
@@ -51,10 +56,7 @@ const imageUrl = new URL(image, siteUrl).toString();
 <meta name="description" content={description} />
 <meta name="keywords" content={SEO_KEYWORDS.join(", ")} />
 <meta name="author" content="Cabinet d'avocats Cugnaux" />
-<meta
-  name="copyright"
-  content="© {new Date().getFullYear()} Cabinet d'avocats Cugnaux"
-/>
+<meta name="copyright" content="© {currentYear} Cabinet d'avocats Cugnaux" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:site_name" content="Cabinet d'avocats Cugnaux" />
@@ -135,7 +137,7 @@ const imageUrl = new URL(image, siteUrl).toString();
 <!-- Performance & Security -->
 <meta
   http-equiv="Content-Security-Policy"
-  content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.avocats-diane.fr; connect-src 'self';"
+  content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googleapis.com https://*.gstatic.com https://*.google.com https://maps.google.com https://www.google.com https://www.gstatic.com https://recaptcha.net https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.avocats-diane.fr https://*.googleapis.com https://*.gstatic.com https://*.google.com; connect-src 'self' https://*.googleapis.com https://*.google.com https://*.gstatic.com https://recaptcha.net; frame-src 'self' https://www.google.com https://*.google.com https://recaptcha.net https://challenges.cloudflare.com;"
 />
 <meta http-equiv="X-Content-Type-Options" content="nosniff" />
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />

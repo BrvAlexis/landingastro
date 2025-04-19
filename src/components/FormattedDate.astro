@@ -1,17 +1,18 @@
 ---
 interface Props {
-	date: Date;
+  date: Date;
 }
 
 const { date } = Astro.props;
+
+// Formatage fixe pour éviter les différences serveur/client
+const formattedDate = new Intl.DateTimeFormat("fr-FR", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+}).format(date);
 ---
 
 <time datetime={date.toISOString()}>
-	{
-		date.toLocaleDateString('en-us', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
-		})
-	}
+  {formattedDate}
 </time>

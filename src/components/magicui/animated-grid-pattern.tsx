@@ -35,16 +35,23 @@ export function AnimatedGridPattern({
   const id = useId();
   const containerRef = useRef(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-  const [squares, setSquares] = useState(() => generateSquares(numSquares));
+  const [squares, setSquares] = useState<Array<{ id: number; pos: number[] }>>(
+    []
+  );
+  const [isMounted, setIsMounted] = useState(false);
 
+  // Fonction pour obtenir une position basée sur les dimensions
   function getPos() {
+    if (!dimensions.width || !dimensions.height) {
+      return [0, 0]; // Position par défaut si les dimensions ne sont pas encore définies
+    }
     return [
       Math.floor((Math.random() * dimensions.width) / width),
       Math.floor((Math.random() * dimensions.height) / height),
     ];
   }
 
-  // Adjust the generateSquares function to return objects with an id, x, and y
+  // Générer des carrés avec des positions
   function generateSquares(count: number) {
     return Array.from({ length: count }, (_, i) => ({
       id: i,
@@ -52,8 +59,10 @@ export function AnimatedGridPattern({
     }));
   }
 
-  // Function to update a single square's position
+  // Mise à jour de la position d'un carré
   const updateSquarePosition = (id: number) => {
+    if (!isMounted) return;
+
     setSquares((currentSquares) =>
       currentSquares.map((sq) =>
         sq.id === id
@@ -66,14 +75,19 @@ export function AnimatedGridPattern({
     );
   };
 
-  // Update squares to animate in
+  // Effet pour définir le composant comme monté côté client
   useEffect(() => {
-    if (dimensions.width && dimensions.height) {
+    setIsMounted(true);
+  }, []);
+
+  // Effet pour générer les carrés une fois que les dimensions sont disponibles et seulement côté client
+  useEffect(() => {
+    if (isMounted && dimensions.width && dimensions.height) {
       setSquares(generateSquares(numSquares));
     }
-  }, [dimensions, numSquares]);
+  }, [dimensions, numSquares, isMounted]);
 
-  // Resize observer to update container dimensions
+  // Observer le redimensionnement pour mettre à jour les dimensions
   useEffect(() => {
     const resizeObserver = new ResizeObserver((entries) => {
       for (let entry of entries) {
@@ -122,28 +136,30 @@ export function AnimatedGridPattern({
         </pattern>
       </defs>
       <rect width="100%" height="100%" fill={`url(#${id})`} />
-      <svg x={x} y={y} className="overflow-visible">
-        {squares.map(({ pos: [x, y], id }, index) => (
-          <motion.rect
-            initial={{ opacity: 0 }}
-            animate={{ opacity: maxOpacity }}
-            transition={{
-              duration,
-              repeat: 1,
-              delay: index * 0.1,
-              repeatType: "reverse",
-            }}
-            onAnimationComplete={() => updateSquarePosition(id)}
-            key={`${x}-${y}-${index}`}
-            width={width - 1}
-            height={height - 1}
-            x={x * width + 1}
-            y={y * height + 1}
-            fill="currentColor"
-            strokeWidth="0"
-          />
-        ))}
-      </svg>
+      {isMounted && (
+        <svg x={x} y={y} className="overflow-visible">
+          {squares.map(({ pos: [x, y], id }, index) => (
+            <motion.rect
+              initial={{ opacity: 0 }}
+              animate={{ opacity: maxOpacity }}
+              transition={{
+                duration,
+                repeat: 1,
+                delay: index * 0.1,
+                repeatType: "reverse",
+              }}
+              onAnimationComplete={() => updateSquarePosition(id)}
+              key={`${id}-${index}`}
+              width={width - 1}
+              height={height - 1}
+              x={x * width + 1}
+              y={y * height + 1}
+              fill="currentColor"
+              strokeWidth="0"
+            />
+          ))}
+        </svg>
+      )}
     </svg>
   );
 }

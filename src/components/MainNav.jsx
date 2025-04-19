@@ -11,16 +11,11 @@ import { useState, useEffect } from "react";
 
 export const MainNav = () => {
     const [activeSection, setActiveSection] = useState("");
-    const [isClient, setIsClient] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
-    // Vérification que nous sommes côté client
+    // Utiliser useEffect pour indiquer que le composant est monté côté client
     useEffect(() => {
-        setIsClient(true);
-    }, []);
-
-    // Détection de la section active au défilement
-    useEffect(() => {
-        if (!isClient) return;
+        setMounted(true);
 
         const handleScroll = () => {
             const sections = ["services", "expertise", "equipe"];
@@ -44,14 +39,16 @@ export const MainNav = () => {
         handleScroll(); // Initialisation
 
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [isClient]); // Dépendance à isClient pour s'assurer que ce code s'exécute uniquement côté client
+    }, []);
 
     // Style personnalisé pour les liens actifs
     const getNavLinkStyle = (section) => {
         const baseStyle = navigationMenuTriggerStyle();
-        return `${baseStyle} ${activeSection === section ? "bg-primary/10 font-semibold" : ""} transition-all duration-300`;
+        // N'appliquer les styles actifs que côté client pour éviter les problèmes d'hydratation
+        return `${baseStyle} ${mounted && activeSection === section ? "bg-primary/10 font-semibold" : ""} transition-all duration-300`;
     };
 
+    // Rendu du même contenu côté serveur et client
     return (
         <NavigationMenu className="hidden md:flex">
             <NavigationMenuList className="flex gap-6">
@@ -59,7 +56,7 @@ export const MainNav = () => {
                     <NavigationMenuLink
                         href="/"
                         className={getNavLinkStyle("accueil")}
-                        aria-current={activeSection === "accueil" ? "page" : undefined}
+                        aria-current={mounted && activeSection === "accueil" ? "page" : undefined}
                     >
                         Accueil
                     </NavigationMenuLink>
@@ -67,8 +64,8 @@ export const MainNav = () => {
 
                 <NavigationMenuItem>
                     <NavigationMenuTrigger
-                        className={`${navigationMenuTriggerStyle()} ${activeSection === "services" ? "bg-primary/10 font-semibold" : ""} transition-all duration-300`}
-                        aria-current={activeSection === "services" ? "page" : undefined}
+                        className={`${navigationMenuTriggerStyle()} ${mounted && activeSection === "services" ? "bg-primary/10 font-semibold" : ""} transition-all duration-300`}
+                        aria-current={mounted && activeSection === "services" ? "page" : undefined}
                     >
                         Domaines d'expertise
                     </NavigationMenuTrigger>
@@ -154,7 +151,7 @@ export const MainNav = () => {
                     <NavigationMenuLink
                         href="#expertise"
                         className={getNavLinkStyle("expertise")}
-                        aria-current={activeSection === "expertise" ? "page" : undefined}
+                        aria-current={mounted && activeSection === "expertise" ? "page" : undefined}
                     >
                         Expertises
                     </NavigationMenuLink>
@@ -164,7 +161,7 @@ export const MainNav = () => {
                     <NavigationMenuLink
                         href="#equipe"
                         className={getNavLinkStyle("equipe")}
-                        aria-current={activeSection === "equipe" ? "page" : undefined}
+                        aria-current={mounted && activeSection === "equipe" ? "page" : undefined}
                     >
                         Notre Équipe
                     </NavigationMenuLink>
